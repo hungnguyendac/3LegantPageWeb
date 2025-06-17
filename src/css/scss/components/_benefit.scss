@@ -1,0 +1,110 @@
+$color_1: #141718;
+$color_2: #6c7275;
+$font-family_1: "Poppins", sans-serif;
+$font-family_2: "Inter", sans-serif;
+$background-color_1: #f3f5f7;
+
+.benefit {
+	.inner {
+		padding-top: 48px;
+		padding-bottom: 48px;
+	}
+	.icon {
+		display: inline-block;
+		overflow: hidden;
+		width: 48px;
+		height: 48px;
+		background-image: url(/src/img/sprite_img_icon.png);
+		background-repeat: no-repeat;
+		background-size: 700px 120px;
+		vertical-align: top;
+		cursor: unset;
+		box-sizing: border-box;
+	}
+}
+.benefit_detail {
+	display: flex;
+	gap: 24px;
+	width: 100%;
+}
+.benefit_box {
+	width: calc((100% - 24px) / 4);
+	padding: 48px 32px;
+	background-color: $background-color_1;
+}
+.icon_shipping {
+	background-position: -604px -2px;
+}
+.icon_money {
+	background-position: -504px -53px;
+}
+.icon_secure {
+	background-position: -554px -3px;
+}
+.icon_support {
+	background-position: -554px -53px;
+}
+.benefit_title {
+	display: flex;
+	flex-direction: column;
+	margin-top: 16px;
+	gap: 8px;
+	.br_class {
+		display: none;
+	}
+}
+.benefit_heading {
+	font-family: $font-family_1;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 28px;
+	color: $color_1;
+}
+.benefit_desc {
+	font-family: $font-family_1;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 24px;
+	color: $color_2;
+}
+@media screen and (max-width: 768px) {
+  .icon_money {
+    background-position: -504px -52px;
+  }
+	.benefit {
+		.inner {
+			padding: 51px 31px 34px 32px;
+		}
+	}
+	.benefit_detail {
+		flex-wrap: wrap;
+		flex-direction: row;
+		column-gap: 8px;
+		row-gap: 24px;
+	}
+	.benefit_box {
+		width: calc((100% - 8px) / 2);
+		padding: 32px 16px;
+		box-sizing: border-box;
+	}
+	.benefit_title {
+		gap: 5px;
+		.br_class {
+			display: block;
+		}
+	}
+	.benefit_heading {
+		display: inline;
+		font-family: $font-family_2;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 22px;
+		letter-spacing: 0px;
+	}
+	.benefit_desc {
+		display: inline;
+		font-family: $font-family_2;
+		line-height: 22px;
+		letter-spacing: 0px;
+	}
+}

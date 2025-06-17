@@ -1,0 +1,309 @@
+.inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0px 32px;
+}
+
+span {
+  display: inline-block;
+}
+
+.icon,
+.more_link::before,
+.button_icon {
+  display: inline-block;
+  overflow: hidden;
+  width: 24px;
+  height: 24px;
+  background-image: url(/src/img/sprite_img_icon.png);
+  background-repeat: no-repeat;
+  background-size: 350px 60px;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+.icon_bars {
+  background-position: -78px 1px;
+}
+
+.icon_search {
+  background-position: -2px -1px;
+}
+
+.header_icon .icon_user {
+  background-position: -27px -1px;
+}
+
+.header_icon .icon_bag {
+  background-position: -52px -1px;
+}
+
+.icon_close {
+  background-position: -101px -2px;
+}
+
+.icon_bag {
+  background-position: -52px -1px;
+}
+
+.icon_heart {
+  background-position: -127px -2px;
+}
+
+.icon_instagram {
+  background-position: -152px -1px;
+}
+
+.icon_facebook {
+  background-position: -177px -1px;
+}
+
+.icon_youtube {
+  background-position: -202px -1px;
+}
+
+.icon_sale {
+  background-position: -253px -1px;
+}
+
+.icon_email {
+  background-position: -326px -26px;
+}
+
+.dimmed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000080;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Badge */
+.badge_group {
+  .badge {
+    display: inline-block;
+    align-self: flex-start;
+    min-width: 67px;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 16px;
+    box-sizing: border-box;
+  }
+
+  .badge_sale {
+    min-width: 71px;
+    background-color: #38CB89;
+    color: #FEFEFE;
+  }
+}
+
+/* // Badge */
+
+/* Section header */
+.section_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section_header .section_heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 44px;
+  color: #000;
+  letter-spacing: -0.4px;
+}
+
+.more_link {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  position: relative;
+  height: 28px;
+  font-weight: 500;
+  line-height: 28px;
+  color: #141718;
+  letter-spacing: -0.4px;
+  box-sizing: border-box;
+}
+
+.more_link::after,
+.more_link::before {
+  display: inline-block;
+  content: '';
+}
+
+.more_link::after {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 1px;
+  background-color: #141718;
+}
+
+.more_link::before {
+  background-position: -100px -26px;
+}
+
+/* // Section header */
+/* Banner link */
+.banner_link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 12px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.4px;
+  color: #141718;
+}
+
+.banner_link::after {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(/src/img/sprite_img_icon.png);
+  background-repeat: no-repeat;
+  background-size: 292px 50px;
+  background-position: -85px -22px;
+  vertical-align: top;
+  cursor: pointer;
+  box-sizing: border-box;
+  content: "";
+}
+
+/* // Banner link */
+
+/* Rating */
+.rating {
+  display: block;
+  width: 88px;
+  height: 16px;
+  background-image: url(/src/img/img_stars_bg.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.rating .star {
+  display: block;
+  width: 0;
+  height: 100%;
+  background-image: url(/src/img/img_stars.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* // Rating */
+/* Cart popup */
+.cart_popup .icon_control {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(/src/img/Card_and_product.png);
+  background-repeat: no-repeat;
+  background-size: 167px 167px;
+  vertical-align: top;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.icon_decrease {
+  background-position: -17px 0px;
+}
+
+.icon_increase {
+  background-position: -101px -1px;
+}
+
+/* // Cart popup */
+/* Product Page */
+.product_page {
+  .icon {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url(/src/img/Card_and_product.png);
+    background-repeat: no-repeat;
+    background-size: 125px 125px;
+    vertical-align: top;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+
+  .icon_right {
+    background-position: -87px -1px;
+  }
+
+  .button_icon_left {
+    background-position: -327px -1px;
+  }
+
+  .button_icon_right {
+    background-position: -327px -1px;
+    transform: rotate(180deg);
+  }
+
+  .product_button {
+    .icon {
+      width: 20px;
+      height: 20px;
+      background-size: 208.333px 208.333px;
+    }
+
+    .icon_minus {
+      background-position: -21px -1px;
+    }
+
+    .icon_add {
+      background-position: -1px -1px;
+    }
+
+    .icon_heart {
+      display: inline-block;
+      overflow: hidden;
+      width: 24px;
+      height: 24px;
+      background-image: url(../src/img/sprite_img_icon.png);
+      background-repeat: no-repeat;
+      background-size: 350px 60px;
+      vertical-align: top;
+      box-sizing: border-box;
+    }
+  }
+
+  .reviews_detail {
+    .icon {
+      display: inline-block;
+      overflow: hidden;
+      width: 24px;
+      height: 24px;
+      background-image: url(/src/img/sprite_img_icon.png);
+      background-repeat: no-repeat;
+      background-size: 350px 60px;
+      vertical-align: top;
+      box-sizing: border-box;
+    }
+    .icon_down {
+      background-position: -227px -1px;
+    }
+  }
+}
+
+/* // Product Page */

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <link rel="stylesheet" href="/src/css/lib/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/dist/css/productPage.css">
+</head>
+
+<body>
+  @@include('include/topbar.html')
+  @@include('include/header.html')
+  <section class="product_page">
+    <div class="inner">
+      <ul class="list_link">
+        <li class="list_link_item">
+          <a class="item_link" href="/dist/">
+            Home
+            <span class="icon icon_right"></span>
+          </a>
+        </li>
+        <li class="list_link_item">
+          <a class="item_link" href="#none">
+            Shop
+            <span class="icon icon_right"></span>
+          </a>
+        </li>
+        <li class="list_link_item">
+          <a class="item_link" href="#none">
+            Living Room
+            <span class="icon icon_right"></span>
+          </a>
+        </li>
+        <li class="list_link_item">
+          <a class="item_link" href="#none">
+            Product
+          </a>
+        </li>
+      </ul>
+      <div class="product_loop">
+        <div class="product_slider">
+          <div class="swiper productPage">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="swiper_img" src="/src/img/product_page/product_slide/table_img_slide.png" alt="slide1" />
+              </div>
+              <div class="swiper-slide">
+                <img class="swiper_img" src="/src/img/product_page/product_slide/product_slideA.png" alt="slide5" />
+              </div>
+              <div class="swiper-slide">
+                <img class="swiper_img" src="/src/img/product_page/product_slide/product_slideB.png" alt="slide6" />
+              </div>
+              <div class="swiper-slide">
+                <img class="swiper_img" src="/src/img/product_page/product_slide/product_slideC.png" alt="slide7" />
+              </div>
+              <div class="swiper-slide">
+                <img class="swiper_img" src="/src/img/product_page/product_slide/table_img_slide_1.png" alt="slide2" />
+              </div>
+              <div class="swiper-slide">
+                <img class="swiper_img" src="/src/img/product_page/product_slide/table_img_slide_2.png" alt="slide3" />
+              </div>
+              <div class="swiper-slide">
+                <img class="swiper_img" src="/src/img/product_page/product_slide/table_img_slide_3.png" alt="slide4" />
+              </div>
+            </div>
+            <!-- Navigation -->
+            <button class="swiper-button-prev"></button>
+            <button class="swiper-button-next"></button>
+          </div>
+          <div class="img_area">
+            <img class="img_table" src="/src/img/product_page/table_img_1.png" alt="Product Image">
+            <img class="img_table" src="/src/img/product_page/table_img_2.png" alt="Product Image">
+            <img class="img_table" src="/src/img/product_page/table_img_3.png" alt="Product Image">
+          </div>
+        </div>
+        <div class="product_loop_detail">
+          <div class="product_info">
+            <div class="product_reviews">
+              <img class="rating_review" src="/src/img/product_page/rating_product.png" alt="Rating image">
+              <p class="text_review">11 Reviews</p>
+            </div>
+            <h3 class="product_name">Tray Table</h3>
+            <p class="product_describe">Buy one or buy a few and make every space where you sit more convenient. Light
+              and easy to move around with removable
+              tray top, handy for serving snacks.</p>
+            <p class="product_price">
+              $199.00
+              <span class="price_original">$400.00</span>
+            </p>
+          </div>
+          <div class="offer_time">
+            <p class="time_text">Offer expires in:</p>
+            <ul class="time_box">
+              <li class="time_box_item">
+                <h3 class="time_box_number" id="days">02</h3>
+                <p class="time_box_label">Days</p>
+              </li>
+              <li class="time_box_item">
+                <h3 class="time_box_number" id="hours">12</h3>
+                <p class="time_box_label">Hours</p>
+              </li>
+              <li class="time_box_item">
+                <h3 class="time_box_number" id="minutes">45</h3>
+                <p class="time_box_label">Minutes</p>
+              </li>
+              <li class="time_box_item">
+                <h3 class="time_box_number" id="seconds">05</h3>
+                <p class="time_box_label">Seconds</p>
+              </li>
+            </ul>
+          </div>
+          <div class="product_attributes">
+            <div class="attribute measurements">
+              <p class="attribute_title">Measurements</p>
+              <p class="attribute_detail">17 1/2x20 5/8 "</p>
+            </div>
+            <div class="attribute colors">
+              <div class="choose_color">
+                <p class="attribute_title">Choose Color</p>
+                <span class="icon icon_right"></span>
+              </div>
+              <p class="attribute_detail">Black</p>
+            </div>
+            <ul class="product_list_img">
+              <li class="item_img">
+                <img class="img_st" src="/src/img/product_page/product_st1.png" alt="Product Image">
+              </li>
+              <li class="item_img">
+                <img class="img_st" src="/src/img/product_page/product_st2.png" alt="Product Image">
+              </li>
+              <li class="item_img">
+                <img class="img_st" src="/src/img/product_page/product_st3.png" alt="Product Image">
+              </li>
+              <li class="item_img">
+                <img class="img_st" src="/src/img/product_page/product_st4.png" alt="Product Image">
+              </li>
+            </ul>
+          </div>
+          <div class="product_button">
+            <div class="product_actions">
+              <div class="quantity_actions">
+                <button class="quantity_button button_decrease">
+                  <span class="icon icon_minus"></span>
+                </button>
+                <input class="quantity_input" type="number" min="1" max="99" value="1" />
+                <button class="quantity_button button_increase">
+                  <span class="icon icon_add"></span>
+                </button>
+              </div>
+              <button class="wishlist" type="button">
+                <span class="wishlist_heart"></span>
+                Wishlist
+              </button>
+            </div>
+            <button class="btn_addToCart" type="button">Add to Cart</button>
+          </div>
+          <div class="product_type">
+            <p class="type_info">
+              SKU
+              <span class="label">1117</span>
+            </p>
+            <p class="type_info">
+              CATEGORY
+              <span class="label">Living Room, Bedroom</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="product_tabs">
+        <div class="tab_headers">
+          <button class="tab_button" data-tab="info">Additional Info</button>
+          <button class="tab_button" data-tab="question">Questions</button>
+          <button class="tab_button" data-tab="review">Reviews</button>
+        </div>
+        <div class="customer_reviews">
+          <h3 class="review_title">Customer Reviews</h3>
+          <div class="product_reviews">
+            <img class="rating_review" src="/src/img/product_page/rating_productPage.png" alt="Rating image">
+            <p class="text_review">11 Reviews</p>
+          </div>
+          <p class="firt_review">Be the first to review <span class="name_review">Tray Table</span></p>
+          <div class="feedback_form">
+            <textarea class="feedback_input" placeholder="Share your thoughts"></textarea>
+            <button class="feedback_btn" type="button">Write Review</button>
+          </div>
+        </div>
+        <div class="reviews_detail">
+          <div class="reviews_heading">
+            <h3 class="reviews_heading_title">11 Reviews</h3>
+            <button class="btn_selective" type="button">
+              Newest
+              <span class="icon icon_down"></span>
+            </button>
+          </div>
+          <ul class="reviews_list">
+            <li class="reviews_item">
+              <img class="user_avatar" src="/src/img/review_list/avatar_user_1.png" alt="User Avatar">
+              <div class="user_review">
+                <h3 class="user_name">Sofia Harvetz</h3>
+                <img class="rating_review" src="/src/img/product_page/rating_product.png" alt="Rating image">
+                <p class="comment">
+                  I bought it 3 weeks ago and now come back just to say “Awesome Product”. I really enjoy it. At vero eos et accusamus et
+                  iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupt et quas molestias excepturi
+                  sint non provident.
+                </p>
+                <ul class="comment_actions">
+                  <li class="comment_time">About 1 hour ago</li>
+                  <li class="comment_action">
+                    <button type="button">Like</button>
+                  </li>
+                  <li class="comment_action">
+                    <button type="button">Reply</button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="reviews_item">
+              <img class="user_avatar" src="/src/img/review_list/avatar_user_2.png" alt="User Avatar">
+              <div class="user_review">
+                <h3 class="user_name">Nicolas Jensen</h3>
+                <img class="rating_review" src="/src/img/product_page/rating_product.png" alt="Rating image">
+                <p class="comment">
+                  I bought it 3 weeks ago and now come back just to say “Awesome Product”. I really enjoy it. At vero eos et
+                  accusamus et
+                  iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupt et quas molestias
+                  excepturi
+                  sint non provident.
+                </p>
+                <ul class="comment_actions">
+                  <li class="comment_time">About 1 hour ago</li>
+                  <li class="comment_action">
+                    <button type="button">Like</button>
+                  </li>
+                  <li class="comment_action">
+                    <button type="button">Reply</button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="reviews_item">
+              <img class="user_avatar" src="/src/img/review_list/avatar_user_3.png" alt="User Avatar">
+              <div class="user_review">
+                <h3 class="user_name">Nicolas Jensen</h3>
+                <img class="rating_review" src="/src/img/product_page/rating_product.png" alt="Rating image">
+                <p class="comment">
+                  I bought it 3 weeks ago and now come back just to say “Awesome Product”. I really enjoy it. At vero eos et
+                  accusamus et
+                  iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupt et quas molestias
+                  excepturi
+                  sint non provident.
+                </p>
+                <ul class="comment_actions">
+                  <li class="comment_time">About 1 hour ago</li>
+                  <li class="comment_action">
+                    <button type="button">Like</button>
+                  </li>
+                  <li class="comment_action">
+                    <button type="button">Reply</button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="reviews_item">
+              <img class="user_avatar" src="/src/img/review_list/avatar_user_4.png" alt="User Avatar">
+              <div class="user_review">
+                <h3 class="user_name">Nicolas Jensen</h3>
+                <img class="rating_review" src="/src/img/product_page/rating_product.png" alt="Rating image">
+                <p class="comment">
+                  I bought it 3 weeks ago and now come back just to say “Awesome Product”. I really enjoy it. At vero eos et
+                  accusamus et
+                  iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupt et quas molestias
+                  excepturi
+                  sint non provident.
+                </p>
+                <ul class="comment_actions">
+                  <li class="comment_time">About 1 hour ago</li>
+                  <li class="comment_action">
+                    <button type="button">Like</button>
+                  </li>
+                  <li class="comment_action">
+                    <button type="button">Reply</button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="reviews_item">
+              <img class="user_avatar" src="/src/img/review_list/avatar_user_5.png" alt="User Avatar">
+              <div class="user_review">
+                <h3 class="user_name">Nicolas Jensen</h3>
+                <img class="rating_review" src="/src/img/product_page/rating_product.png" alt="Rating image">
+                <p class="comment">
+                  I bought it 3 weeks ago and now come back just to say “Awesome Product”. I really enjoy it. At vero eos et
+                  accusamus et
+                  iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupt et quas molestias
+                  excepturi
+                  sint non provident.
+                </p>
+                <ul class="comment_actions">
+                  <li class="comment_time">About 1 hour ago</li>
+                  <li class="comment_action">
+                    <button type="button">Like</button>
+                  </li>
+                  <li class="comment_action">
+                    <button type="button">Reply</button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <button class="btn_load_more" type="button">Load more</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  @@include('include/newsletter.html')
+  @@include('include/footer.html')
+  <!-- Dimmed -->
+  <div class="dimmed"></div>
+  <!-- // Dimmed -->
+  <script src="/src/js/swiper-bundle.min.js"></script>
+  <script src="/src/js/jquery-3.7.1.min.js"></script>
+  <script src="/src/js/script.js"></script>
+</body>
+
+</html>

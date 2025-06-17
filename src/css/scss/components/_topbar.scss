@@ -1,0 +1,99 @@
+$color_1: #343839;
+$color_2: #377DFF;
+$font-family_1: "Inter", sans-serif;
+$background-color_1: #F3F5F7;
+
+.top_bar {
+  display: block;
+	.inner {
+		position: relative;
+		max-width: 100%;
+		height: 40px;
+		padding: 0;
+		background-color: $background-color_1;
+	}
+	.icon_arrow_blue {
+		background-position: -303px -26px;
+	}
+	.btn_close {
+		position: absolute;
+		top: 10px;
+		right: 16px;
+		.icon {
+			width: 20px;
+			height: 20px;
+			background-size: 292px 50px;
+		}
+		.icon_close {
+			background-position: -85px -1px;
+		}
+	}
+}
+.top_bar_title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
+	padding-top: 7px;
+	margin-left: -18px;
+	.sale_text {
+		font-family: $font-family_1;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 22px;
+		color: $color_1;
+	}
+	.sale_link {
+		display: inline-flex;
+		align-items: center;
+		border-bottom: 1px solid #377DFF;
+		font-family: $font-family_1;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 24px;
+		color: $color_2;
+		box-sizing: border-box;
+	}
+}
+@media screen and (max-width: 768px) {
+	.top_bar {
+		.inner {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 22px;
+			height: 36px;
+		}
+		.icon {
+			width: 16px;
+			height: 16px;
+			background-size: 233px 40px;
+		}
+		.btn_close {
+			.icon {
+				width: 16px;
+				height: 16px;
+				background-size: 233px 40px;
+			}
+			.icon_close {
+				background-position: -68px -1px;
+			}
+			position: unset;
+		}
+	}
+	.top_bar_title {
+		gap: 9px;
+		margin-left: -1px;
+		padding: 0;
+		.sale_text {
+			font-size: 12px;
+			line-height: 20px;
+		}
+		.sale_link {
+			display: none;
+		}
+	}
+	.icon_sale {
+		background-position: -168px 0px;
+	}
+}

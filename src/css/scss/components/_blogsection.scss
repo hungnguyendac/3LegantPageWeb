@@ -1,0 +1,151 @@
+$color_1: #141718;
+$font-family_1: "Poppins", sans-serif;
+$font-family_2: "Inter", sans-serif;
+
+.blog_section {
+	.inner {
+		max-width: 1121px;
+		margin: 0 auto;
+		padding: 80px 32px;
+	}
+
+	.more_link {
+		align-self: center;
+	}
+}
+.blog {
+	margin-top: 40px;
+	width: 100%;
+	.blog_list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 25px;
+	}
+	.more_link {
+		align-self: flex-start;
+		margin-top: auto;
+	}
+}
+.blog_item {
+	display: flex;
+	flex-direction: column;
+	width: calc((100% - 50px) / 3);
+	.blog_card {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+}
+.blog_card {
+	&:hover {
+		.blog_img {
+			scale: 1.1;
+		}
+	}
+}
+.blog_card_image {
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	padding-top: 91.1215%;
+	.blog_img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: scale 0.3s ease;
+	}
+}
+.blog_card_content {
+	display: block;
+	margin-top: 23px;
+	margin-bottom: 8px;
+	.blog_title {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		max-height: 56px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-family: $font-family_1;
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 28px;
+		letter-spacing: -0.1px;
+		color: $color_1;
+	}
+}
+@media screen and (max-width: 768px) {
+	.blog_section {
+		.inner {
+			padding: 40px 32px;
+		}
+    .section_header {
+      flex-wrap: wrap;
+      .section_heading {
+        font-size: 34px;
+        letter-spacing: -0.6px;
+        line-height: 38px;
+      }
+      .more_link {
+        position: relative;
+        margin-top: 25px;
+        margin-right: -3px;
+        height: 24px;
+        font-size: 14px;
+        letter-spacing: 0px;
+        &::after {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 97%;
+        }
+        &::before {
+          background-position: -102px -26px;
+        }
+      }
+    }
+	}
+	.blog {
+    margin-top: 29px;
+		.blog_list {
+			gap: 22px;
+		}
+		.more_link {
+			gap: 1px;
+			height: 24px;
+			font-size: 14px;
+			line-height: 24px;
+			letter-spacing: 0px;
+			&::before {
+				width: 20px;
+				height: 20px;
+				background-position: -104px -29px;
+			}
+			&::after {
+				bottom: 1px;
+			}
+		}
+	}
+	.blog_item {
+		width: 100%;
+	}
+	.blog_card_content {
+		margin-top: 17px;
+		.blog_title {
+			font-family: $font-family_2;
+			font-size: 16px;
+			font-weight: 600;
+			line-height: 26px;
+		}
+	}
+	.blog_header {
+		.blog_heading {
+			font-size: 34px;
+			line-height: 38px;
+			letter-spacing: -0.6px;
+		}
+	}
+}

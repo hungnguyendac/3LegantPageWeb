@@ -1,0 +1,146 @@
+$color_1: #141718;
+$font-family_1: "Poppins", sans-serif;
+$background-color_1: #F3F5F7;
+$background-color_2: #fff;
+
+.banner {
+	margin-top: 40px;
+	.inner {
+		max-width: 1120px;
+		margin: 0 auto;
+		padding: 0px 32px;
+	}
+}
+.banner_card {
+	display: flex;
+	gap: 24px;
+}
+
+.banner_first {
+	flex: 1;
+	background-color: $background-color_1;
+	position: relative;
+	.banner_img {
+    position: relative;
+		padding-top: 121.168%;
+		overflow: hidden;
+	}
+  .img_banner,
+  .img_banner_mobile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .img_banner_mobile {
+    display: none;
+  }
+}
+.banner_last {
+	flex: 1;
+	background-color: $background-color_1;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	background-color: $background-color_2;
+	.banner_content {
+    top: unset;
+		bottom: 40px;
+		left: 32px;
+    z-index: 999;
+	}
+	.banner_img {
+    position: relative;
+		width: 100%;
+		padding-top: 58.21%;
+		overflow: hidden;
+	}
+  .img_banner,
+  .img_banner_mobile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .img_banner_mobile {
+    display: none;
+  }
+}
+.banner_content {
+	display: inline-block;
+	position: absolute;
+	top: 48px;
+	left: 48px;
+}
+.banner_title {
+	font-family: $font-family_1;
+	font-size: 34px;
+	font-weight: 500;
+	line-height: 38px;
+	letter-spacing: -0.6px;
+	color: $color_1;
+}
+.banner_last_item {
+	position: relative;
+	background-color: $background-color_1;
+	overflow: hidden;
+	.img_banner {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+@media screen and (max-width: 768px) {
+	.banner_card {
+		flex-direction: column;
+		gap: 16px;
+		.banner_title {
+			font-size: 28px;
+			line-height: 34px;
+		}
+		.banner_link {
+			gap: 2px;
+			margin-top: 6px;
+			border-bottom: 1px solid #141718;
+			font-size: 14px;
+			line-height: 24px;
+			letter-spacing: 0px;
+		}
+	}
+	.banner_first {
+		.banner_content {
+			top: 32px;
+			left: 32px;
+		}
+    .img_banner {
+      display: none;
+    }
+    .img_banner_mobile {
+      display: block;
+    }
+	}
+	.banner_last {
+		gap: 16px;
+		.banner_content {
+			bottom: 32px;
+		}
+    .banner_img {
+      padding-top: 0;
+    }
+    .img_banner {
+      display: none;
+    }
+    .img_banner_mobile {
+      display: block;
+    }
+	}
+}
