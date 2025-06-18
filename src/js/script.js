@@ -191,3 +191,54 @@ $(".img_area img").each(function (index) {
     swiperProductsPage.slideTo(index + 4);
   });
 });
+
+const reactionBox = document.getElementById("reactionBox");
+let longPressTimer = null;
+
+function showReactionBox(offset) {
+  reactionBox.style.left = offset.left - 80 + "px";
+  reactionBox.style.top = offset.top - 50 + "px";
+  reactionBox.style.opacity = "1";
+  reactionBox.style.visibility = "visible";
+  reactionBox.style.pointerEvents = "auto";
+}
+
+function hideReactionBox() {
+  reactionBox.style.opacity = "0";
+  reactionBox.style.visibility = "hidden";
+  reactionBox.style.pointerEvents = "none";
+}
+
+$(".comment_like").each(function () {
+  const $btn = $(this);
+
+  // Hover mouse, hide reactionBox
+  $btn.on("mouseenter", function () {
+    const offset = $btn.offset();
+    showReactionBox(offset);
+  });
+
+  // Press and Hold
+  $btn.on("mousedown", function () {
+    longPressTimer = setTimeout(() => {
+      const offset = $btn.offset();
+      showReactionBox(offset);
+    }, 300);
+  });
+
+  // Release hold
+  $btn.on("mouseup mouseleave", function () {
+    clearTimeout(longPressTimer);
+
+    setTimeout(() => {
+      if (!reactionBox.matches(":hover")) {
+        hideReactionBox();
+      }
+    }, 200);
+  });
+});
+
+// Move mouse away from reaction → hide box
+$("#reactionBox").on("mouseleave", function () {
+  hideReactionBox();
+});

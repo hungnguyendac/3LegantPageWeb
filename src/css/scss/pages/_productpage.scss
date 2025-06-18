@@ -50,17 +50,20 @@ $background-color_6: #6C7275;
 .product_slider {
   display: flex;
   flex-direction: column;
-  gap: 19px;
-  .swiper_img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  gap: 23px;
 }
 
 .productPage {
-  width: 100%;
   max-width: 547px;
+  max-height: 728px;
+  width: 100%;
+  min-height: 414px;
+}
+
+.swiper_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .swiper-button-prev,
@@ -84,15 +87,17 @@ $background-color_6: #6C7275;
     cursor: pointer;
   }
 }
+
 .swiper-button-next {
   left: unset;
   right: 32px;
+
   &::after {
     transform: rotate(180deg);
   }
 }
 
-.img_slider {
+.productPage {
   position: relative;
 
   .badge_group {
@@ -102,6 +107,7 @@ $background-color_6: #6C7275;
     position: absolute;
     top: 32px;
     left: 32px;
+    z-index: 9999;
 
     .badge {
       padding: 9px 18px;
@@ -132,6 +138,7 @@ $background-color_6: #6C7275;
 .img_area {
   display: flex;
   gap: 24px;
+
   .img_table {
     cursor: pointer;
   }
@@ -139,6 +146,7 @@ $background-color_6: #6C7275;
 
 .product_loop_detail {
   flex: 1;
+  overflow: hidden;
 
   .product_info {
     display: flex;
@@ -172,8 +180,8 @@ $background-color_6: #6C7275;
   font-family: $font-family_1;
   font-size: 40px;
   font-weight: 500;
-  line-height: 44px;
-  letter-spacing: -0.4px;
+  line-height: 43px;
+  letter-spacing: -0.7px;
   color: $color_3;
 }
 
@@ -206,6 +214,7 @@ $background-color_6: #6C7275;
 
 .offer_time {
   padding: 24px 0;
+  border-bottom: 1px solid #E8ECEF;
 }
 
 .time_text {
@@ -272,7 +281,7 @@ $background-color_6: #6C7275;
   font-size: 20px;
   font-weight: 400;
   line-height: 31px;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.3px;
   color: $color_6;
 }
 
@@ -297,7 +306,8 @@ $background-color_6: #6C7275;
 .product_list_img {
   display: flex;
   gap: 16px;
-  margin-top: 16px;
+  margin-top: 17px;
+  height: 73px;
 }
 
 .img_st {
@@ -312,7 +322,7 @@ $background-color_6: #6C7275;
 }
 
 .product_button {
-  padding: 29px 0;
+  padding: 30px 0;
 }
 
 .product_actions {
@@ -359,7 +369,7 @@ $background-color_6: #6C7275;
 
   .button_decrease,
   .button_increase {
-    padding: 8px;
+    padding: 15px;
     cursor: pointer;
   }
 }
@@ -370,7 +380,7 @@ $background-color_6: #6C7275;
   justify-content: center;
   align-items: center;
   gap: 8px;
-  min-width: 357px;
+  max-width: 357px;
   height: 52px;
   width: 100%;
   border: 1px solid $color_3;
@@ -409,7 +419,7 @@ $background-color_6: #6C7275;
 .btn_addToCart {
   width: 100%;
   height: 52px;
-  margin-top: 16px;
+  margin-top: 17px;
   border-radius: 8px;
   background-color: $background-color_5;
   text-align: center;
@@ -421,6 +431,7 @@ $background-color_6: #6C7275;
   color: $color_7;
   transition: all 0.2s ease;
   cursor: pointer;
+
   &:hover {
     background-color: $background-color_6;
     transform: scale(1.02);
@@ -431,8 +442,9 @@ $background-color_6: #6C7275;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding: 23px 0 24px 0;
+  padding: 25px 0;
   border-top: 1px solid #E8ECEF;
+
   .type_info {
     display: flex;
     align-items: center;
@@ -443,23 +455,26 @@ $background-color_6: #6C7275;
     font-weight: 400;
     line-height: 20px;
     color: #6C7275;
+
     .label {
       color: $color_3;
     }
   }
+
   .type_info:first-child {
     max-width: 147px;
   }
 }
 
 .product_tabs {
-  padding: 43px 0 40px 0;
+  padding: 40px 0;
 }
 
-.tab_headers {
+.tab_heading {
   display: flex;
   gap: 80px;
   border-bottom: 1px solid #E8ECEF;
+
   .tab_button {
     font-family: "Inter", sans-serif;
     font-size: 18px;
@@ -468,7 +483,14 @@ $background-color_6: #6C7275;
     letter-spacing: -0.4px;
     color: #807E7E;
     cursor: pointer;
+    .reviews_number {
+      display: none;
+    }
+    .icon {
+      display: none;
+    }
   }
+
   .tab_button:last-child {
     color: #121212;
     border-bottom: 1px solid #121212;
@@ -477,21 +499,25 @@ $background-color_6: #6C7275;
 
 .customer_reviews {
   margin-top: 48px;
+
   .review_title {
-    font-family: "Poppins",sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 28px;
     font-weight: 500;
     line-height: 34px;
     letter-spacing: -0.7px;
     color: #23262F;
   }
+
   .product_reviews {
     gap: 8px;
     margin-top: 24px;
   }
+
   .rating_review {
     width: 80px;
   }
+
   .firt_review {
     display: inline-flex;
     gap: 27px;
@@ -502,6 +528,7 @@ $background-color_6: #6C7275;
     line-height: 26px;
     color: #23262F;
   }
+
   .name_review {
     font-size: 16px;
     font-weight: 600;
@@ -513,9 +540,10 @@ $background-color_6: #6C7275;
   justify-content: space-between;
   align-items: center;
   margin-top: 30px;
-  padding: 11px 15px 12px 24px;    
+  padding: 11px 15px 12px 24px;
   border: 2px solid #E8ECEF;
   border-radius: 16px;
+
   .feedback_input {
     flex: 1;
     min-height: 26px;
@@ -528,6 +556,7 @@ $background-color_6: #6C7275;
     overflow: hidden;
     outline: none;
     box-sizing: border-box;
+
     &::placeholder {
       font-family: "Inter", sans-serif;
       font-size: 16px;
@@ -535,6 +564,7 @@ $background-color_6: #6C7275;
       line-height: 22px;
     }
   }
+
   .feedback_btn {
     width: 176px;
     height: 40px;
@@ -548,10 +578,19 @@ $background-color_6: #6C7275;
     color: #fff;
     transition: all 0.2s ease;
     cursor: pointer;
+
     &:hover {
       background-color: #333;
-      transform: scale(1.02); 
+      transform: scale(1.02);
     }
+  }
+
+  .feedback_btn_icon {
+    display: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 100px;
+    background-color: #000;
   }
 }
 
@@ -560,6 +599,7 @@ $background-color_6: #6C7275;
   justify-content: space-between;
   align-items: center;
   margin-top: 41px;
+
   .reviews_heading_title {
     font-family: "Poppins", sans-serif;
     font-size: 28px;
@@ -568,6 +608,7 @@ $background-color_6: #6C7275;
     letter-spacing: -0.9px;
     color: #000;
   }
+
   .btn_selective {
     display: flex;
     align-items: center;
@@ -594,10 +635,12 @@ $background-color_6: #6C7275;
 }
 
 .reviews_item {
+  position: relative;
   display: flex;
   gap: 40px;
   padding-bottom: 23px;
   border-bottom: 1px solid #E8ECEF;
+
   .user_avatar {
     width: 72px;
     height: 72px;
@@ -613,12 +656,14 @@ $background-color_6: #6C7275;
     line-height: 32px;
     color: $color_3;
   }
+
   .rating_review {
     width: 88px;
     height: 16px;
     margin-top: 17px;
     object-fit: cover;
   }
+
   .comment {
     margin-top: 12px;
     font-family: "Inter", sans-serif;
@@ -633,18 +678,27 @@ $background-color_6: #6C7275;
   display: flex;
   gap: 14px;
   margin-top: 23px;
+
   .comment_time {
     font-family: "Inter", sans-serif;
     font-size: 12px;
     font-weight: 400;
     line-height: 20px;
   }
+
   .comment_action {
     font-family: "Inter", sans-serif;
     font-size: 12px;
     font-weight: 600;
     line-height: 20px;
     color: #23262F;
+    cursor: pointer;
+
+    .button {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
   }
 }
 
@@ -663,8 +717,284 @@ $background-color_6: #6C7275;
   letter-spacing: -0.4px;
   color: #23262F;
   cursor: pointer;
+
   &:hover {
     background-color: $color_6;
     color: $color_7;
+  }
+}
+
+.reaction_wrapper {
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.reaction_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  width: 156px;
+  height: 34px;
+  padding: 6px 16px;
+  background: #FCFCFD;
+  border-radius: 32px;
+  box-shadow: 0 8px 16px -8px rgba(15, 15, 15, 0.2);
+  position: relative;
+
+  &::after {
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    height: 8px;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    opacity: 1;
+    border-color: #FCFCFD transparent transparent transparent;
+    content: "";
+  }
+
+  .reaction_img {
+    width: 16px;
+    height: 24px;
+    object-fit: contain;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-5px) scale(1.3);
+      z-index: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .product_loop {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .swiper_img {
+    aspect-ratio: 3 / 4;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .product_loop {
+    gap: 0;
+  }
+
+  .list_link {
+    gap: 8px;
+  }
+
+  .list_link_item .item_link {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .productPage {
+    .badge_group {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+
+      .badge {
+        padding: 8px 18px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    left: 24px;
+  }
+
+  .swiper-button-next {
+    left: unset;
+    right: 24px;
+  }
+
+  .img_area {
+    display: none;
+  }
+
+  .product_loop_detail {
+    margin-top: 10px;
+    padding-top: 16px;
+    .product_info {
+      gap: 17px;
+      padding-bottom: 21px;
+    }
+    .offer_time {
+      padding-bottom: 23px;
+    }
+  }
+  .colors {
+    margin-top: 26px;
+  }
+
+  .product_list_img {
+    gap: 9px;
+  }
+
+  .product_actions {
+    gap: 8px;
+  }
+
+  .product_button {
+    padding: 21px 0;
+  }
+  .quantity_actions {
+    width: 80px;
+    height: 32px;
+    .quantity_button {
+      padding: 0;
+      width: 40px;
+      height: 32px;
+    }
+    .quantity_input {
+      width: 21px;
+      font-size: 12px;
+    }
+  }
+
+  .wishlist {
+    height: 32px;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    .wishlist_heart {
+      width: 16px;
+      height: 16px;
+      overflow: visible;
+      background-size: 233.33px 40px;
+      background-position: -84px 0px;
+    }
+  }
+
+  .btn_addToCart {
+    height: 32px;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0px;
+  }
+
+  .product_type {
+    margin-top: 3px;
+    padding: 23px 0;
+  }
+
+  .product_tabs {
+    margin-top: 4px;
+    padding: 0 0 80px 0;
+  }
+  
+  .tab_heading {
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
+    border: none;
+    .tab_button {
+      position: relative;
+      width: 100%;
+      height: 39px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #6C7275;
+      text-align: start;
+      line-height: 32px;
+      .reviews_number {
+        display: inline-block;
+      }
+      .icon {
+        display: inline-block;
+        position: absolute;
+        top: 2px;
+        right: 0;
+      }
+    }
+    .tab_button:last-child {
+      border-bottom: 1px solid #141718;
+      .icon_down {
+        background-position: -226px -1px;
+      }
+    }
+  }
+
+  .customer_reviews {
+    margin-top: 40px;
+    .review_title {
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: 0px;
+    }
+
+    .firt_review {
+      gap: 7px;
+      line-height: 22px;
+      .name_review {
+        font-size: 14px;
+      }
+    }
+
+    .feedback_form {
+      min-height: 64px;
+      padding: 0 15px 0 22px;
+      gap: 8px;
+      .feedback_input {
+        padding: 17px 0 5px 0;
+        font-size: 14px;
+        line-height: 22px;
+        &::placeholder {
+          font-size: 14px;
+          line-height: 22px;
+          letter-spacing: 0px;
+        }
+      }
+      .feedback_btn {
+        display: none;
+      }
+    }
+    .feedback_btn_icon {
+      display: inline-block;
+    }
+  }
+
+  .reviews_heading {
+    flex-direction: column;
+    align-items: start;
+    gap: 28px;
+    margin-top: 42px;
+    .reviews_heading_title {
+      letter-spacing: -0.8px;
+    }
+    .btn_selective {
+      width: 100%;
+    }
+  }
+
+  .reviews_list {
+    margin-top: 40px;
+  }
+  .reviews_item {
+    position: relative;
+    flex-direction: column;
+    gap: 5px;
+    padding-bottom: 16px;
+  }
+
+  .user_review_heading {
+    position: absolute;
+    top: 0px;
+    left: 88px;
+  }
+
+  .comment_actions {
+    margin-top: 14px;
   }
 }

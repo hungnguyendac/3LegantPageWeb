@@ -65,6 +65,10 @@
                 <img class="swiper_img" src="/src/img/product_page/product_slide/table_img_slide_3.png" alt="slide4" />
               </div>
             </div>
+            <div class="badge_group">
+              <span class="badge">NEW</span>
+              <span class="badge badge_sale">-50%</span>
+            </div>
             <!-- Navigation -->
             <button class="swiper-button-prev"></button>
             <button class="swiper-button-next"></button>
@@ -169,10 +173,20 @@
         </div>
       </div>
       <div class="product_tabs">
-        <div class="tab_headers">
-          <button class="tab_button" data-tab="info">Additional Info</button>
-          <button class="tab_button" data-tab="question">Questions</button>
-          <button class="tab_button" data-tab="review">Reviews</button>
+        <div class="tab_heading">
+          <button class="tab_button" data-tab="info">
+            Additional Info
+            <span class="icon icon_down"></span>
+          </button>
+          <button class="tab_button" data-tab="question">
+            Questions
+            <span class="icon icon_down"></span>
+          </button>
+          <button class="tab_button" data-tab="review">
+            Reviews 
+            <span class="reviews_number">(11)</span>
+            <span class="icon icon_down"></span>
+          </button>
         </div>
         <div class="customer_reviews">
           <h3 class="review_title">Customer Reviews</h3>
@@ -184,6 +198,9 @@
           <div class="feedback_form">
             <textarea class="feedback_input" placeholder="Share your thoughts"></textarea>
             <button class="feedback_btn" type="button">Write Review</button>
+            <button class="feedback_btn_icon">
+              <span class="icon icon_btn"></span>
+            </button>
           </div>
         </div>
         <div class="reviews_detail">
@@ -198,8 +215,10 @@
             <li class="reviews_item">
               <img class="user_avatar" src="/src/img/review_list/avatar_user_1.png" alt="User Avatar">
               <div class="user_review">
-                <h3 class="user_name">Sofia Harvetz</h3>
-                <img class="rating_review" src="/src/img/product_page/rating_product.png" alt="Rating image">
+                <div class="user_review_heading">
+                  <h3 class="user_name">Sofia Harvetz</h3>
+                  <img class="rating_review" src="/src/img/product_page/rating_product.png" alt="Rating image">
+                </div>
                 <p class="comment">
                   I bought it 3 weeks ago and now come back just to say “Awesome Product”. I really enjoy it. At vero eos et accusamus et
                   iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupt et quas molestias excepturi
@@ -207,11 +226,11 @@
                 </p>
                 <ul class="comment_actions">
                   <li class="comment_time">About 1 hour ago</li>
-                  <li class="comment_action">
-                    <button type="button">Like</button>
+                  <li class="comment_action comment_like">
+                    <button class="button button_like" type="button">Like</button>
                   </li>
                   <li class="comment_action">
-                    <button type="button">Reply</button>
+                    <button class="button" type="button">Reply</button>
                   </li>
                 </ul>
               </div>
@@ -219,8 +238,10 @@
             <li class="reviews_item">
               <img class="user_avatar" src="/src/img/review_list/avatar_user_2.png" alt="User Avatar">
               <div class="user_review">
-                <h3 class="user_name">Nicolas Jensen</h3>
-                <img class="rating_review" src="/src/img/product_page/rating_product.png" alt="Rating image">
+                <div class="user_review_heading">
+                  <h3 class="user_name">Nicolas Jensen</h3>
+                  <img class="rating_review" src="/src/img/product_page/rating_product.png" alt="Rating image">
+                </div>
                 <p class="comment">
                   I bought it 3 weeks ago and now come back just to say “Awesome Product”. I really enjoy it. At vero eos et
                   accusamus et
@@ -230,11 +251,11 @@
                 </p>
                 <ul class="comment_actions">
                   <li class="comment_time">About 1 hour ago</li>
-                  <li class="comment_action">
-                    <button type="button">Like</button>
+                  <li class="comment_action comment_like">
+                    <button class="button button_like" type="button">Like</button>
                   </li>
                   <li class="comment_action">
-                    <button type="button">Reply</button>
+                    <button class="button" type="button">Reply</button>
                   </li>
                 </ul>
               </div>
@@ -242,8 +263,10 @@
             <li class="reviews_item">
               <img class="user_avatar" src="/src/img/review_list/avatar_user_3.png" alt="User Avatar">
               <div class="user_review">
-                <h3 class="user_name">Nicolas Jensen</h3>
-                <img class="rating_review" src="/src/img/product_page/rating_product.png" alt="Rating image">
+                <div class="user_review_heading">
+                  <h3 class="user_name">Nicolas Jensen</h3>
+                  <img class="rating_review" src="/src/img/product_page/rating_product.png" alt="Rating image">
+                </div>
                 <p class="comment">
                   I bought it 3 weeks ago and now come back just to say “Awesome Product”. I really enjoy it. At vero eos et
                   accusamus et
@@ -253,11 +276,11 @@
                 </p>
                 <ul class="comment_actions">
                   <li class="comment_time">About 1 hour ago</li>
-                  <li class="comment_action">
-                    <button type="button">Like</button>
+                  <li class="comment_action comment_like">
+                    <button class="button button_like" type="button">Like</button>
                   </li>
                   <li class="comment_action">
-                    <button type="button">Reply</button>
+                    <button class="button" type="button">Reply</button>
                   </li>
                 </ul>
               </div>
@@ -265,8 +288,10 @@
             <li class="reviews_item">
               <img class="user_avatar" src="/src/img/review_list/avatar_user_4.png" alt="User Avatar">
               <div class="user_review">
-                <h3 class="user_name">Nicolas Jensen</h3>
-                <img class="rating_review" src="/src/img/product_page/rating_product.png" alt="Rating image">
+                <div class="user_review_heading">
+                  <h3 class="user_name">Nicolas Jensen</h3>
+                  <img class="rating_review" src="/src/img/product_page/rating_product.png" alt="Rating image">
+                </div>
                 <p class="comment">
                   I bought it 3 weeks ago and now come back just to say “Awesome Product”. I really enjoy it. At vero eos et
                   accusamus et
@@ -276,11 +301,11 @@
                 </p>
                 <ul class="comment_actions">
                   <li class="comment_time">About 1 hour ago</li>
-                  <li class="comment_action">
-                    <button type="button">Like</button>
+                  <li class="comment_action comment_like">
+                    <button class="button button_like" type="button">Like</button>
                   </li>
                   <li class="comment_action">
-                    <button type="button">Reply</button>
+                    <button class="button" type="button">Reply</button>
                   </li>
                 </ul>
               </div>
@@ -288,8 +313,10 @@
             <li class="reviews_item">
               <img class="user_avatar" src="/src/img/review_list/avatar_user_5.png" alt="User Avatar">
               <div class="user_review">
-                <h3 class="user_name">Nicolas Jensen</h3>
-                <img class="rating_review" src="/src/img/product_page/rating_product.png" alt="Rating image">
+                <div class="user_review_heading">
+                  <h3 class="user_name">Nicolas Jensen</h3>
+                  <img class="rating_review" src="/src/img/product_page/rating_product.png" alt="Rating image">
+                </div>
                 <p class="comment">
                   I bought it 3 weeks ago and now come back just to say “Awesome Product”. I really enjoy it. At vero eos et
                   accusamus et
@@ -299,17 +326,27 @@
                 </p>
                 <ul class="comment_actions">
                   <li class="comment_time">About 1 hour ago</li>
-                  <li class="comment_action">
-                    <button type="button">Like</button>
+                  <li class="comment_action comment_like">
+                    <button class="button button_like" type="button">Like</button>
                   </li>
                   <li class="comment_action">
-                    <button type="button">Reply</button>
+                    <button class="button" type="button">Reply</button>
                   </li>
                 </ul>
               </div>
             </li>
           </ul>
           <button class="btn_load_more" type="button">Load more</button>
+        </div>
+        <div class="reaction_wrapper" id="reactionBox">
+          <div class="reaction_box">
+            <img class="reaction_img" src="/src/img/emoticons/favourite.png" alt="Favorite">
+            <img class="reaction_img" src="/src/img/emoticons/approved.png" alt="Approved">
+            <img class="reaction_img" src="/src/img/emoticons/like.png" alt="Like">
+            <img class="reaction_img" src="/src/img/emoticons/smile.png" alt="Smile">
+            <img class="reaction_img" src="/src/img/emoticons/hahaha.png" alt="Hahaha">
+            <img class="reaction_img" src="/src/img/emoticons/angry.png" alt="Angry">
+          </div>
         </div>
       </div>
     </div>

@@ -280,7 +280,7 @@ span {
       overflow: hidden;
       width: 24px;
       height: 24px;
-      background-image: url(../src/img/sprite_img_icon.png);
+      background-image: url(/src/img/sprite_img_icon.png);
       background-repeat: no-repeat;
       background-size: 350px 60px;
       vertical-align: top;
@@ -288,7 +288,8 @@ span {
     }
   }
 
-  .reviews_detail {
+  .reviews_detail,
+  .feedback_form {
     .icon {
       display: inline-block;
       overflow: hidden;
@@ -302,6 +303,26 @@ span {
     }
     .icon_down {
       background-position: -227px -1px;
+    }
+    .icon_btn {
+      background-position: -177px -26px;
+    }
+  }
+
+  .tab_button {
+    .icon {
+      display: inline-block;
+      overflow: hidden;
+      width: 24px;
+      height: 24px;
+      background-image: url(/src/img/Card_and_product.png);
+      background-repeat: no-repeat;
+      background-size: 250px 250px;
+      vertical-align: top;
+      box-sizing: border-box;
+    }
+    .icon_down {
+      background-position: -201px -1px;
     }
   }
 }
