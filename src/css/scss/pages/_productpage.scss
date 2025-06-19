@@ -965,6 +965,10 @@ $background-color_6: #6C7275;
     }
   }
 
+  .tab_content {
+    display: none;
+  }
+
   .customer_reviews {
     margin-top: 37px;
     .review_title {
@@ -1035,6 +1039,15 @@ $background-color_6: #6C7275;
 
   .comment_actions {
     margin-top: 14px;
+  }
+
+  .select {
+    width: 100%;
+  }
+
+  .select .btn_option {
+    max-width: 100%;
+    width: 100%;
   }
 }
 
