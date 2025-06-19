@@ -327,4 +327,114 @@ span {
   }
 }
 
+.select_list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.select_list .select_item {
+  padding: 8px 0;
+}
+
+.select_list .is_active {
+  border-bottom: 1px solid #141718;
+}
+
+.select_list .is_active .select_link {
+  color: #141718;
+  font-weight: bold;
+}
+
+.select_item .select_link {
+  display: block;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #6C7275;
+}
+
+.select {
+  position: relative;
+}
+
+.select .btn_option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 256px;
+  height: 48px;
+  padding: 8px 11px 8px 13px;
+  border: 2px solid #E8ECEF;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  cursor: pointer;
+}
+
+.select .btn_option::after {
+  display: inline-block;
+  overflow: hidden;
+  width: 24px;
+  height: 24px;
+  background-image: url(/src/img/sprite_img_icon.png);
+  background-repeat: no-repeat;
+  background-size: 350px 60px;
+  background-position: -226px -1px;
+  vertical-align: top;
+  transition: rotate 0.25s ease;
+  box-sizing: border-box;
+  content: '';
+}
+
+.select .btn_option.is_active::after {
+  rotate: 180deg;
+}
+
+.select .select_option {
+  overflow: hidden;
+  position: absolute;
+  top: 55px;
+  width: 100%;
+  max-height: 0;
+  padding: 0 8px;
+  border: 2px solid #f3f5f7;
+  border-radius: 12px;
+  background-color: #fff;
+  opacity: 0;
+  pointer-events: none;
+  transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+  box-sizing: border-box;
+  z-index: 99;
+}
+
+.select_option.is_show {
+  max-height: 290px; 
+  padding: 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.select_list .select_item:hover {
+  border-radius: 8px;
+  background-color: #F3F5F7;
+  border-bottom: none;
+}
+
+.select_link {
+  padding-left: 8px;
+}
+
+.select_list .is_active {
+  border-bottom: none;
+}
+
+.select_list .select_item:hover .select_link {
+  color: #141718;
+  font-weight: bold;
+}
+
 /* // Product Page */

@@ -1,5 +1,5 @@
 // data.js
-export const reviewsData = [
+const reviewsData = [
   {
     id: 1,
     ratingImg: "/src/img/product_page/rating_product.png",
@@ -265,3 +265,51 @@ export const reviewsData = [
     reaction: null,
   },
 ];
+
+$(function () {
+  let shownCount = 0;
+  const perPage = 5;
+
+  function renderReviews() {
+    const $list = $("#reviewList").empty();
+    const toShow = reviewsData.slice(0, shownCount);
+
+    $(toShow).each(function (index, review) {
+      const html = `
+        <li class="reviews_item">
+          <img class="user_avatar" src="${review.avatar}" alt="User Avatar">
+          <div class="user_review">
+            <div class="user_review_heading">
+              <h3 class="user_name">${review.name}</h3>
+              <img class="rating_review" src="${review.ratingImg}" alt="Rating image">
+            </div>
+            <p class="comment">${review.comment}</p>
+            <ul class="comment_actions">
+              <li class="comment_time">${review.time}</li>
+              <li class="comment_action comment_like">
+                <button class="button button_like" type="button">Like</button>
+              </li>
+              <li class="comment_action">
+                <button class="button" type="button">Reply</button>
+              </li>
+            </ul>
+          </div>
+        </li>
+      `;
+      $list.append(html);
+      initReactionEvents();
+    });
+
+    const $btn = $(".btn_load_more");
+    $btn.text(shownCount >= reviewsData.length ? "Hide" : "Load more");
+  }
+
+  shownCount = perPage;
+  renderReviews();
+
+  $(".btn_load_more").on("click", function () {
+    shownCount =
+      shownCount >= reviewsData.length ? perPage : shownCount + perPage;
+    renderReviews();
+  });
+});

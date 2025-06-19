@@ -1,4 +1,3 @@
-import { reviewsData } from './data.js'
 // Close Top-bar
 $(".top_bar .btn_close").on("click", () => {
   $(".top_bar").hide();
@@ -105,22 +104,22 @@ $(document).ready(() => {
 });
 
 // Increase width textarea
-$(document).ready(function() {
-  const $textarea = $(".feedback_input");
-  const baseHeight = $textarea[0].scrollHeight;
+// $(document).ready(function() {
+//   const $textarea = $(".feedback_input");
+//   const baseHeight = $textarea[0].scrollHeight;
 
-  $textarea.css("height", baseHeight + "px");
+//   $textarea.css("height", baseHeight + "px");
 
-  $textarea.on("input", function () {
-    $(this).css("height", "auto");
+//   $textarea.on("input", function () {
+//     $(this).css("height", "auto");
 
-    if ($(this).val().trim() === "") {
-      $(this).css("height", baseHeight + "px");
-    } else {
-      $(this).css("height", this.scrollHeight + "px");
-    }
-  });
-});
+//     if ($(this).val().trim() === "") {
+//       $(this).css("height", baseHeight + "px");
+//     } else {
+//       $(this).css("height", this.scrollHeight + "px");
+//     }
+//   });
+// });
 
 const swiperBanner = new Swiper(".mySwiper", {
   slidesPerView: "auto",
@@ -193,60 +192,64 @@ $(".img_area img").each(function (index) {
   });
 });
 
-// Import data reviews_list
-let shownCount = 0;
-const perPage = 5;
+// Event click Newest
+$(document).ready(function () {
+  const $btnList = $(".btn_option");
+  const $menuList = $(".select_option");
 
-function renderReviews() {
-  const $list = $("#reviewList");
-  $list.empty();
-
-  const toShow = reviewsData.slice(0, shownCount);
-  $(toShow).each(function (index, review) {
-    const html = `
-      <li class="reviews_item">
-        <img class="user_avatar" src="${review.avatar}" alt="User Avatar">
-        <div class="user_review">
-          <div class="user_review_heading">
-            <h3 class="user_name">${review.name}</h3>
-            <img class="rating_review" src="${review.ratingImg}" alt="Rating image">
-          </div>
-          <p class="comment">${review.comment}</p>
-          <ul class="comment_actions">
-            <li class="comment_time">${review.time}</li>
-            <li class="comment_action comment_like">
-              <button class="button button_like" type="button">Like</button>
-            </li>
-            <li class="comment_action">
-              <button class="button" type="button">Reply</button>
-            </li>
-          </ul>
-        </div>
-      </li>
-    `;
-    $list.append(html);
-    initReactionEvents();
+  $btnList.on("click", function (e) {
+    e.stopPropagation(); 
+    $btnList.toggleClass("is_active");
+    $menuList.toggleClass("is_show");
   });
 
-  // Update button
-  const $btn = $(".btn_load_more");
-  if (shownCount >= reviewsData.length) {
-    $btn.text("Hide");
-  } else {
-    $btn.text("Load more");
-  }
-}
+  $(document).on("click", function (e) {
+    const $target = $(e.target);
+    const isClickOutside =
+      !$btnList.is($target) &&
+      !$btnList.has($target).length &&
+      !$menuList.is($target) &&
+      !$menuList.has($target).length;
+    const isLargeScreen = $(window).width() > 768;
 
-shownCount = perPage;
-renderReviews();
+    if (isClickOutside || isLargeScreen) {
+      $btnList.removeClass("is_active");
+      $menuList.removeClass("is_show");
+    }
+  });
 
-$(".btn_load_more").on("click", function () {
-  if (shownCount >= reviewsData.length) {
-    shownCount = perPage;
-  } else {
-    shownCount += perPage;
-  }
-  renderReviews();
+  $(window).on("resize", function () {
+    if ($(window).width() > 768) {
+      if ($menuList.hasClass("is_show")) {
+        $btnList.removeClass("is_active");
+        $menuList.removeClass("is_show");
+      }
+    }
+  });
+});
+
+// Events click data-tab
+$(document).ready(function () {
+  $(".tab_button").on("click", function () {
+    const selectedTab = $(this).data("tab");
+
+    $(".tab_button").removeClass("active");
+    $(this).addClass("active");
+
+    $(".tab_content").removeClass("active");
+    $('.tab_content[data-tab="' + selectedTab + '"]').addClass("active");
+
+    // Toggle hiển thị info_mobile
+    if (selectedTab === "review") {
+      $(".info_mobile").stop().animate({ height: "auto", opacity: 1 }, 300);
+    } else {
+      $(".info_mobile").stop().animate({ height: 0, opacity: 0 }, 300);
+    }
+  });
+
+  $('.tab_button[data-tab="review"]').addClass("active");
+  $('.tab_content[data-tab="review"]').addClass("active");
+  $(".info_mobile").css({ height: "auto", opacity: 1 }); 
 });
 
 // Emoticon event

@@ -178,50 +178,120 @@
             Additional Info
             <span class="icon icon_down"></span>
           </button>
+          <div class="tab_content_mobile" data-tab="info">
+            <div class="additional_info">
+              <div class="info_pc">
+                <div class="info_content">
+                  <h3 class="info_content_heading">Details</h3>
+                  <p class="info_content_text">You can use the removable tray for serving. The design makes it easy to
+                    put the tray back after use since you place it
+                    directly on the table frame without having to fit it into any holes.</p>
+                </div>
+                <div class="info_content">
+                  <h3 class="info_content_heading">Packaging</h3>
+                  <p class="info_content_text">
+                    Width: 20 " Height: 1 ½ " Length: 21 ½ " <br>
+                    Weight: 7 lb 8 oz <br>
+                    Package(s): 1
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
           <button class="tab_button" data-tab="question">
             Questions
             <span class="icon icon_down"></span>
           </button>
-          <button class="tab_button" data-tab="review">
-            Reviews 
+          <div class="tab_content_mobile" data-tab="question">
+            <p>The question section is developing.</p>
+          </div>
+          <button class="tab_button active" data-tab="review">
+            Reviews
             <span class="reviews_number">(11)</span>
             <span class="icon icon_down"></span>
           </button>
         </div>
-        <div class="customer_reviews">
-          <h3 class="review_title">Customer Reviews</h3>
-          <div class="product_reviews">
-            <img class="rating_review" src="/src/img/product_page/rating_productPage.png" alt="Rating image">
-            <p class="text_review">11 Reviews</p>
+        <div class="tab_contents">
+          <div class="tab_content" data-tab="info">
+            <div class="additional_info">
+              <div class="info_pc">
+                <div class="info_content">
+                  <h3 class="info_content_heading">Details</h3>
+                  <p class="info_content_text">You can use the removable tray for serving. The design makes it easy to
+                    put the tray back after use since you place it
+                    directly on the table frame without having to fit it into any holes.</p>
+                </div>
+                <div class="info_content">
+                  <h3 class="info_content_heading">Packaging</h3>
+                  <p class="info_content_text">
+                    Width: 20 " Height: 1 ½ " Length: 21 ½ " <br>
+                    Weight: 7 lb 8 oz <br>
+                    Package(s): 1
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <p class="firt_review">Be the first to review <span class="name_review">Tray Table</span></p>
-          <div class="feedback_form">
-            <textarea class="feedback_input" placeholder="Share your thoughts"></textarea>
-            <button class="feedback_btn" type="button">Write Review</button>
-            <button class="feedback_btn_icon">
-              <span class="icon icon_btn"></span>
-            </button>
+          <div class="tab_content" data-tab="question">
+            <p>The question section is developing.</p>
           </div>
-        </div>
-        <div class="reviews_detail">
-          <div class="reviews_heading">
-            <h3 class="reviews_heading_title">11 Reviews</h3>
-            <button class="btn_selective" type="button">
-              Newest
-              <span class="icon icon_down"></span>
-            </button>
-          </div>
-          <ul class="reviews_list" id="reviewList"></ul>
-          <button class="btn_load_more" type="button">Load more</button>
-        </div>
-        <div class="reaction_wrapper" id="reactionBox">
-          <div class="reaction_box">
-            <img class="reaction_img" src="/src/img/emoticons/favourite.png" alt="Favorite">
-            <img class="reaction_img" src="/src/img/emoticons/approved.png" alt="Approved">
-            <img class="reaction_img" src="/src/img/emoticons/like.png" alt="Like">
-            <img class="reaction_img" src="/src/img/emoticons/smile.png" alt="Smile">
-            <img class="reaction_img" src="/src/img/emoticons/hahaha.png" alt="Hahaha">
-            <img class="reaction_img" src="/src/img/emoticons/angry.png" alt="Angry">
+          <div class="tab_content active" data-tab="review">
+            <div class="customer_reviews">
+              <h3 class="review_title">Customer Reviews</h3>
+              <div class="product_reviews">
+                <img class="rating_review" src="/src/img/product_page/rating_productPage.png" alt="Rating image">
+                <p class="text_review">11 Reviews</p>
+              </div>
+              <p class="firt_review">Be the first to review <span class="name_review">Tray Table</span></p>
+              <div class="feedback_form">
+                <textarea class="feedback_input" placeholder="Share your thoughts"></textarea>
+                <button class="feedback_btn" type="button">Write Review</button>
+                <button class="feedback_btn_icon">
+                  <span class="icon icon_btn"></span>
+                </button>
+              </div>
+            </div>
+            <div class="reviews_detail">
+              <div class="reviews_heading">
+                <h3 class="reviews_heading_title">11 Reviews</h3>
+                <div class="select">
+                  <button class="btn_option" type="button" aria-label="Select">
+                    Newest
+                  </button>
+                  <div class="select_option">
+                    <ul class="select_list">
+                      <li class="select_item is_active">
+                        <a class="select_link" href="#none">Newest 1</a>
+                      </li>
+                      <li class="select_item">
+                        <a class="select_link" href="#none">Newest 2</a>
+                      </li>
+                      <li class="select_item">
+                        <a class="select_link" href="#none">Newest 3</a>
+                      </li>
+                      <li class="select_item">
+                        <a class="select_link" href="#none">Newest 4</a>
+                      </li>
+                      <li class="select_item">
+                        <a class="select_link" href="#none">Newest 5</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <ul class="reviews_list" id="reviewList"></ul>
+              <button class="btn_load_more" type="button">Load more</button>
+            </div>
+            <div class="reaction_wrapper" id="reactionBox">
+              <div class="reaction_box">
+                <img class="reaction_img" src="/src/img/emoticons/favourite.png" alt="Favorite">
+                <img class="reaction_img" src="/src/img/emoticons/approved.png" alt="Approved">
+                <img class="reaction_img" src="/src/img/emoticons/like.png" alt="Like">
+                <img class="reaction_img" src="/src/img/emoticons/smile.png" alt="Smile">
+                <img class="reaction_img" src="/src/img/emoticons/hahaha.png" alt="Hahaha">
+                <img class="reaction_img" src="/src/img/emoticons/angry.png" alt="Angry">
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -234,6 +304,7 @@
   <!-- // Dimmed -->
   <script src="/src/js/swiper-bundle.min.js"></script>
   <script src="/src/js/jquery-3.7.1.min.js"></script>
-  <script type="module" src="/src/js/script.js"></script>
+  <script src="/src/js/data_reviews_list.js"></script>
+  <script src="/src/js/script.js"></script>
 </body>
 </html>
