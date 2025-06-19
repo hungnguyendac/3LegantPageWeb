@@ -1,3 +1,4 @@
+import { reviewsData } from './data.js'
 // Close Top-bar
 $(".top_bar .btn_close").on("click", () => {
   $(".top_bar").hide();
@@ -192,8 +193,66 @@ $(".img_area img").each(function (index) {
   });
 });
 
+// Import data reviews_list
+let shownCount = 0;
+const perPage = 5;
+
+function renderReviews() {
+  const $list = $("#reviewList");
+  $list.empty();
+
+  const toShow = reviewsData.slice(0, shownCount);
+  $(toShow).each(function (index, review) {
+    const html = `
+      <li class="reviews_item">
+        <img class="user_avatar" src="${review.avatar}" alt="User Avatar">
+        <div class="user_review">
+          <div class="user_review_heading">
+            <h3 class="user_name">${review.name}</h3>
+            <img class="rating_review" src="${review.ratingImg}" alt="Rating image">
+          </div>
+          <p class="comment">${review.comment}</p>
+          <ul class="comment_actions">
+            <li class="comment_time">${review.time}</li>
+            <li class="comment_action comment_like">
+              <button class="button button_like" type="button">Like</button>
+            </li>
+            <li class="comment_action">
+              <button class="button" type="button">Reply</button>
+            </li>
+          </ul>
+        </div>
+      </li>
+    `;
+    $list.append(html);
+    initReactionEvents();
+  });
+
+  // Update button
+  const $btn = $(".btn_load_more");
+  if (shownCount >= reviewsData.length) {
+    $btn.text("Hide");
+  } else {
+    $btn.text("Load more");
+  }
+}
+
+shownCount = perPage;
+renderReviews();
+
+$(".btn_load_more").on("click", function () {
+  if (shownCount >= reviewsData.length) {
+    shownCount = perPage;
+  } else {
+    shownCount += perPage;
+  }
+  renderReviews();
+});
+
+// Emoticon event
 const reactionBox = document.getElementById("reactionBox");
 let longPressTimer = null;
+let $currentBtn = null;
 
 function showReactionBox(offset) {
   reactionBox.style.left = offset.left - 80 + "px";
@@ -209,36 +268,76 @@ function hideReactionBox() {
   reactionBox.style.pointerEvents = "none";
 }
 
-$(".comment_like").each(function () {
-  const $btn = $(this);
+function initReactionEvents() {
+  $(".comment_like").each(function () {
+    const $btn = $(this);
 
-  // Hover mouse, hide reactionBox
-  $btn.on("mouseenter", function () {
-    const offset = $btn.offset();
-    showReactionBox(offset);
-  });
+    if ($btn.data("initialized")) return;
+    $btn.data("initialized", true);
 
-  // Press and Hold
-  $btn.on("mousedown", function () {
-    longPressTimer = setTimeout(() => {
+    let isLiked = false;
+
+    $btn.on("mouseenter", function () {
+      $currentBtn = $btn;
       const offset = $btn.offset();
       showReactionBox(offset);
-    }, 300);
-  });
+    });
 
-  // Release hold
-  $btn.on("mouseup mouseleave", function () {
-    clearTimeout(longPressTimer);
+    $btn.on("mousedown", function () {
+      $currentBtn = $btn;
+      longPressTimer = setTimeout(() => {
+        const offset = $btn.offset();
+        showReactionBox(offset);
+      }, 300);
+    });
 
-    setTimeout(() => {
-      if (!reactionBox.matches(":hover")) {
-        hideReactionBox();
+    $btn.on("mouseup mouseleave", function () {
+      clearTimeout(longPressTimer);
+      setTimeout(() => {
+        if (!reactionBox.matches(":hover")) {
+          hideReactionBox();
+        }
+      }, 200);
+    });
+
+    $btn.on("click", function () {
+      if (!isLiked) {
+        $btn.html(`
+          <span class="reaction_display">
+            <img class="reaction_img" src="/src/img/emoticons/like.png" alt="Like">
+            <span class="reaction_count">12</span>
+          </span>
+        `);
+        isLiked = true;
+      } else {
+        $btn.html('<button class="button button_like" type="button">Like</button>');
+        isLiked = false;
       }
-    }, 200);
+    });
+
+    $btn.data("liked", () => isLiked);
+    $btn.data("setLiked", (val) => {
+      isLiked = val;
+    });
   });
+}
+
+$(".reaction_box .reaction_img").on("click", function () {
+  if (!$currentBtn) return;
+
+  const imgSrc = $(this).attr("src");
+  const altText = $(this).attr("alt");
+
+  $currentBtn.html(`
+    <span class="reaction_display">
+      <img class="reaction_img" src="${imgSrc}" alt="${altText}">
+      <span class="reaction_count">12</span>
+    </span>
+  `);
+  $currentBtn.data("setLiked")(true);
+  hideReactionBox();
 });
 
-// Move mouse away from reaction → hide box
 $("#reactionBox").on("mouseleave", function () {
   hideReactionBox();
 });

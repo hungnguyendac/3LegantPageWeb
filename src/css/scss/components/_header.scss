@@ -347,12 +347,12 @@ $background-color_2: #fff;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3px 6px;
   border: 1px solid #07090a;
   border-radius: 4px;
   .button_decrease,
   .button_increase {
-    padding: 4px;
+    width: 27px;
+    height: 32px;
     cursor: pointer;
   }
   .quantity_input {

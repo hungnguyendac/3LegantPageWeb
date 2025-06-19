@@ -211,131 +211,7 @@
               <span class="icon icon_down"></span>
             </button>
           </div>
-          <ul class="reviews_list">
-            <li class="reviews_item">
-              <img class="user_avatar" src="/src/img/review_list/avatar_user_1.png" alt="User Avatar">
-              <div class="user_review">
-                <div class="user_review_heading">
-                  <h3 class="user_name">Sofia Harvetz</h3>
-                  <img class="rating_review" src="/src/img/product_page/rating_product.png" alt="Rating image">
-                </div>
-                <p class="comment">
-                  I bought it 3 weeks ago and now come back just to say “Awesome Product”. I really enjoy it. At vero eos et accusamus et
-                  iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupt et quas molestias excepturi
-                  sint non provident.
-                </p>
-                <ul class="comment_actions">
-                  <li class="comment_time">About 1 hour ago</li>
-                  <li class="comment_action comment_like">
-                    <button class="button button_like" type="button">Like</button>
-                  </li>
-                  <li class="comment_action">
-                    <button class="button" type="button">Reply</button>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="reviews_item">
-              <img class="user_avatar" src="/src/img/review_list/avatar_user_2.png" alt="User Avatar">
-              <div class="user_review">
-                <div class="user_review_heading">
-                  <h3 class="user_name">Nicolas Jensen</h3>
-                  <img class="rating_review" src="/src/img/product_page/rating_product.png" alt="Rating image">
-                </div>
-                <p class="comment">
-                  I bought it 3 weeks ago and now come back just to say “Awesome Product”. I really enjoy it. At vero eos et
-                  accusamus et
-                  iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupt et quas molestias
-                  excepturi
-                  sint non provident.
-                </p>
-                <ul class="comment_actions">
-                  <li class="comment_time">About 1 hour ago</li>
-                  <li class="comment_action comment_like">
-                    <button class="button button_like" type="button">Like</button>
-                  </li>
-                  <li class="comment_action">
-                    <button class="button" type="button">Reply</button>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="reviews_item">
-              <img class="user_avatar" src="/src/img/review_list/avatar_user_3.png" alt="User Avatar">
-              <div class="user_review">
-                <div class="user_review_heading">
-                  <h3 class="user_name">Nicolas Jensen</h3>
-                  <img class="rating_review" src="/src/img/product_page/rating_product.png" alt="Rating image">
-                </div>
-                <p class="comment">
-                  I bought it 3 weeks ago and now come back just to say “Awesome Product”. I really enjoy it. At vero eos et
-                  accusamus et
-                  iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupt et quas molestias
-                  excepturi
-                  sint non provident.
-                </p>
-                <ul class="comment_actions">
-                  <li class="comment_time">About 1 hour ago</li>
-                  <li class="comment_action comment_like">
-                    <button class="button button_like" type="button">Like</button>
-                  </li>
-                  <li class="comment_action">
-                    <button class="button" type="button">Reply</button>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="reviews_item">
-              <img class="user_avatar" src="/src/img/review_list/avatar_user_4.png" alt="User Avatar">
-              <div class="user_review">
-                <div class="user_review_heading">
-                  <h3 class="user_name">Nicolas Jensen</h3>
-                  <img class="rating_review" src="/src/img/product_page/rating_product.png" alt="Rating image">
-                </div>
-                <p class="comment">
-                  I bought it 3 weeks ago and now come back just to say “Awesome Product”. I really enjoy it. At vero eos et
-                  accusamus et
-                  iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupt et quas molestias
-                  excepturi
-                  sint non provident.
-                </p>
-                <ul class="comment_actions">
-                  <li class="comment_time">About 1 hour ago</li>
-                  <li class="comment_action comment_like">
-                    <button class="button button_like" type="button">Like</button>
-                  </li>
-                  <li class="comment_action">
-                    <button class="button" type="button">Reply</button>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="reviews_item">
-              <img class="user_avatar" src="/src/img/review_list/avatar_user_5.png" alt="User Avatar">
-              <div class="user_review">
-                <div class="user_review_heading">
-                  <h3 class="user_name">Nicolas Jensen</h3>
-                  <img class="rating_review" src="/src/img/product_page/rating_product.png" alt="Rating image">
-                </div>
-                <p class="comment">
-                  I bought it 3 weeks ago and now come back just to say “Awesome Product”. I really enjoy it. At vero eos et
-                  accusamus et
-                  iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupt et quas molestias
-                  excepturi
-                  sint non provident.
-                </p>
-                <ul class="comment_actions">
-                  <li class="comment_time">About 1 hour ago</li>
-                  <li class="comment_action comment_like">
-                    <button class="button button_like" type="button">Like</button>
-                  </li>
-                  <li class="comment_action">
-                    <button class="button" type="button">Reply</button>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
+          <ul class="reviews_list" id="reviewList"></ul>
           <button class="btn_load_more" type="button">Load more</button>
         </div>
         <div class="reaction_wrapper" id="reactionBox">
@@ -358,7 +234,6 @@
   <!-- // Dimmed -->
   <script src="/src/js/swiper-bundle.min.js"></script>
   <script src="/src/js/jquery-3.7.1.min.js"></script>
-  <script src="/src/js/script.js"></script>
+  <script type="module" src="/src/js/script.js"></script>
 </body>
-
 </html>
