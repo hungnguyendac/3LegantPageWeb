@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3Legant Home Page</title>
+  <link rel="stylesheet" href="/src/css/lib/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/dist/css/home.css">
+</head>
+<body>
+  <div class="top_bar">
+  <div class="inner">
+    <div class="top_bar_title">
+      <span class="icon icon_sale"></span>
+      <p class="sale_text">30% off storewide — Limited time!</p>
+      <a class="sale_link" href="#none">
+        Shop Now
+        <span class="icon icon_arrow_blue"></span>
+      </a>
+    </div>
+    <button class="btn_close">
+      <span class="icon icon_close"></span>
+    </button>
+  </div>
+</div>
+  <header class="header">
+  <div class="inner">
+    <!-- Header box -->
+    <div class="header_box">
+      <!-- Header logo -->
+      <div class="header_logo">
+        <button class="menu_button is_active" type="button" aria-label="Open popup">
+          <span class="icon icon_bars"></span>
+        </button>
+        <h1 class="logo">
+          <a class="logo_link" href="/dist/" aria-label="Logo">
+            <img class="logo_img" src="../src/img/img_logo.svg" alt="Logo">
+          </a>
+        </h1>
+      </div>
+      <!-- // Header logo -->
+      <!-- Header menu -->
+      <nav class="header_menu">
+        <ul class="header_list">
+          <li class="header_item">
+            <a class="header_item_link" href="#none" aria-label="Home">
+              Home
+            </a>
+          </li>
+          <li class="header_item">
+            <a class="header_item_link" href="#none" aria-label="Shop">
+              Shop
+            </a>
+          </li>
+          <li class="header_item">
+            <a class="header_item_link" href="/dist/productPage.html" aria-label="Product">
+              Product
+            </a>
+          </li>
+          <li class="header_item">
+            <a class="header_item_link" href="#none" aria-label="Contact">
+              Contact Us
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- // Header menu -->
+      <!-- Header icon -->
+      <div class="header_icon">
+        <button class="search_button" type="button" aria-label="Search">
+          <span class="icon icon_search"></span>
+        </button>
+        <a class="user_link" href="/src/views/signUp.html" aria-label="User">
+          <span class="icon icon_user"></span>
+        </a>
+        <button class="bag_button" aria-label="Shopping">
+          <span class="icon icon_bag"></span>
+          <span class="icon_number">2</span>
+        </button>
+      </div>
+      <!-- // Header icon -->
+    </div>
+    <!-- // Header box -->
+    <!-- // Popup mobile -->
+    <div class="popup">
+      <!-- popup header -->
+      <div class="popup_header">
+        <div class="popup_logo">
+          <a class="logo_link" href="/dist/" aria-label="Logo">
+            <h2 class="logo_text">3legant<span class="dot">.</span></h2>
+          </a>
+          <button class="button_close" type="button" aria-label="Close">
+            <span class="icon icon_close"></span>
+          </button>
+        </div>
+        <div class="popup_input">
+          <button class="search_button" type="button" aria-label="Search">
+            <span class="icon icon_search"></span>
+          </button>
+          <input class="input_search" type="text" placeholder="Search">
+        </div>
+        <nav class="popup_menu"></nav>
+      </div>
+      <!-- // Popup header -->
+      <!-- Popup footer -->
+      <div class="popup_footer">
+        <div class="title">
+          <p class="title_text">Cart</p>
+          <div class="title_icon">
+            <a class="bag_link" href="#none" aria-label="Shopping">
+              <span class="icon icon_bag"></span>
+            </a>
+            <span class="icon_number">2</span>
+          </div>
+        </div>
+        <div class="title">
+          <p class="title_text">Wishlist</p>
+          <div class="title_icon">
+            <a class="love_link" href="#none" aria-label="Favorite Products">
+              <span class="icon icon_heart"></span>
+            </a>
+            <span class="icon_number">2</span>
+          </div>
+        </div>
+        <div class="popup_button">
+          <button class="popup_button_sign">Sign In</button>
+        </div>
+        <div class="popup_footer_icon">
+          <a class="instagram_link" href="#none" aria-label="Instagram">
+            <span class="icon icon_instagram"></span>
+          </a>
+          <a class="fb_link" href="#none" aria-label="Facebook">
+            <span class="icon icon_facebook"></span>
+          </a>
+          <a class="ytb_link" href="#none" aria-label="Youtube">
+            <span class="icon icon_youtube"></span>
+          </a>
+        </div>
+      </div>
+      <!-- // Popup footer -->
+    </div>
+    <!-- Popup mobile -->
+    <!-- Cart popup -->
+    <div class="cart_popup">
+      <div class="cart_popup_header">
+        <h3 class="cart_popup_title">Cart</h3>
+        <button class="button" type="button">
+          <span class="icon icon_close"></span>
+        </button>
+      </div>
+      <ul class="cart_list">
+        <li class="cart_item">
+          <img class="cart_item_img" src="/src/img/cart_popup/product_1.png" alt="Product image">
+          <div class="cart_item_info">
+            <div class="product_info">
+              <div class="product_info_title">
+                <p class="product_name">Tray Table</p>
+                <p class="product_color">Color: Black</p>
+                <div class="quantity_selector">
+                  <button class="button_decrease" type="button">
+                    <span class="icon_control icon_decrease"></span>
+                  </button>
+                  <input class="quantity_input" type="number" min="1" max="99" value="2" />
+                  <button class="button_increase" type="button">
+                    <span class="icon_control icon_increase"></span>
+                  </button>
+                </div>
+              </div>
+              <div class="product_price_remove">
+                <p class="product_price">$19.19</p>
+                <button class="remove_item_btn">
+                  <span class="icon icon_close"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="cart_item">
+          <img class="cart_item_img" src="/src/img/cart_popup/product_2.png" alt="Product image">
+          <div class="cart_item_info">
+            <div class="product_info">
+              <div class="product_info_title">
+                <p class="product_name">Tray Table</p>
+                <p class="product_color">Color: Red</p>
+                <div class="quantity_selector">
+                  <button class="button_decrease" type="button">
+                    <span class="icon_control icon_decrease"></span>
+                  </button>
+                  <input class="quantity_input" type="number" min="1" max="99" value="2" />
+                  <button class="button_increase" type="button">
+                    <span class="icon_control icon_increase"></span>
+                  </button>
+                </div>
+              </div>
+              <div class="product_price_remove">
+                <p class="product_price">$19.19</p>
+                <button class="remove_item_btn">
+                  <span class="icon icon_close"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="cart_item">
+          <img class="cart_item_img" src="/src/img/cart_popup/product_3.png" alt="Product image">
+          <div class="cart_item_info">
+            <div class="product_info">
+              <div class="product_info_title">
+                <p class="product_name">Table lamp</p>
+                <p class="product_color">Color: Gold</p>
+                <div class="quantity_selector">
+                  <button class="button_decrease" type="button">
+                    <span class="icon_control icon_decrease"></span>
+                  </button>
+                  <input class="quantity_input" type="number" min="1" max="99" value="2" />
+                  <button class="button_increase" type="button">
+                    <span class="icon_control icon_increase"></span>
+                  </button>
+                </div>
+              </div>
+              <div class="product_price_remove">
+                <p class="product_price">$39.00</p>
+                <button class="remove_item_btn">
+                  <span class="icon icon_close"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="cart_popup_payment">
+        <div class="total_amount">
+          <div class="subtotal">
+            <p class="subtotal_text">Subtotal</p>
+            <p class="subtotal_price">$99.00</p>
+          </div>
+          <div class="total">
+            <p class="total_text">Total</p>
+            <p class="total_price">$234.00</p>
+          </div>
+        </div>
+        <button class="btn_checkout" type="button">Checkout</button>
+        <a class="cart_link" href="#none">View Cart</a>
+      </div>
+    </div>
+    <!-- // Cart popup -->
+  </div>
+</header>
+  <section class="slide_bar">
+  <div class="inner">
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img class="swiper_img" src="/src/img/palaholder_img.png" alt="slide1" />
+          <img class="swiper_img_mobile" src="/src/img/palaholder_img_mobile.png" alt="slide1" />
+        </div>
+        <div class="swiper-slide">
+          <img class="swiper_img" src="/src/img/palaholder_img.png" alt="slide2" />
+          <img class="swiper_img_mobile" src="/src/img/palaholder_img_mobile.png" alt="slide2" />
+        </div>
+        <div class="swiper-slide">
+          <img class="swiper_img" src="/src/img/palaholder_img.png" alt="slide3" />
+          <img class="swiper_img_mobile" src="/src/img/palaholder_img_mobile.png" alt="slide3" />
+        </div>
+      </div>
+      <!-- Navigation -->
+      <button class="swiper-button-prev"></button>
+      <button class="swiper-button-next"></button>
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+    <!-- // Swiper -->
+    <!-- Introduction -->
+    <div class="introduction">
+      <h2 class="simply_text">Simply Unique<span class="dot">/</span>Simply Better<span class="dot">.</span></h2>
+      <p class="introduction_text">
+        <strong>3legant</strong>
+        is a gift & decorations store based in HCMC, Vietnam. Est since 2019.
+      </p>
+    </div>
+    <!-- // Introduction -->
+  </div>
+</section>
+  <section class="banner">
+  <div class="inner">
+    <div class="banner_card">
+      <!-- Banner first -->
+      <a class="banner_first" href="#none">
+        <div class="banner_content">
+          <h3 class="banner_title">Living Room</h3>
+          <div class="banner_link">Shop Now</div>
+        </div>
+        <div class="banner_img">
+          <img class="img_banner" src="/src/img/banner_img_1.png" alt="banner 1">
+          <img class="img_banner_mobile" src="/src/img/banner_img_1_mobile.png" alt="banner mobile">
+        </div>
+      </a>
+      <!-- // Banner first -->
+      <!-- Banner last -->
+      <div class="banner_last">
+        <a class="banner_last_item" href="#none">
+          <div class="banner_content">
+            <h3 class="banner_title">Bedroom</h3>
+            <div class="banner_link">Shop Now</div>
+          </div>
+          <div class="banner_img">
+            <img class="img_banner" src="/src/img/banner_img_2.png" alt="banner 2">
+            <img class="img_banner_mobile" src="/src/img/banner_img_2_mobile.png" alt="banner mobile">
+          </div>
+        </a>
+        <a class="banner_last_item" href="#none">
+          <div class="banner_content">
+            <h3 class="banner_title">Kitchen</h3>
+            <div class="banner_link">Shop Now</div>
+          </div>
+          <div class="banner_img">
+            <img class="img_banner" src="/src/img/banner_img_3.png" alt="banner 3">
+            <img class="img_banner_mobile" src="/src/img/banner_img_3_mobile.png" alt="banner mobile">
+          </div>
+        </a>
+      </div>
+      <!-- // Banner last -->
+    </div>
+  </div>
+</section>
+  <section class="product">
+  <div class="inner">
+    <!-- Section header-->
+    <div class="section_header">
+      <h2 class="section_heading">New <br>Arrivals</h2>
+      <a class="more_link" href="#none">
+        More Products
+      </a>
+    </div>
+    <!-- // Section header -->
+    <!-- Product detail -->
+    <div class="product_detail">
+      <div class="swiper product_slides">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a class="product_link" href="#none">
+              <img class="swiper_img" src="/src/img/product1.png" alt="Loveseat Sofa">
+            </a>
+            <div class="rating">
+              <span class="star" style="width: 100%;"></span>
+            </div>
+            <div class="product_title">
+              <a class="product_name" href="#none">Loveseat Sofa</a>
+              <div class="product_price">
+                <span class="price">$199.00</span>
+                <span class="price price_old">$400.00</span>
+              </div>
+            </div>
+            <div class="badge_group">
+              <span class="badge">NEW</span>
+              <span class="badge badge_sale">-50%</span>
+            </div>
+            <button class="btn_like" type="button" aria-label="Like">
+              <span class="icon icon_like"></span>
+            </button>
+            <button class="btn_card">Add to cart</button>
+          </div>
+          <div class="swiper-slide">
+            <a class="product_link" href="#none">
+              <img class="swiper_img" src="/src/img/product2.png" alt="Table Lamp">
+            </a>
+            <div class="rating">
+              <span class="star" style="width: 80%;"></span>
+            </div>
+            <div class="product_title">
+              <a class="product_name" href="#none">Table Lamp</a>
+              <div class="product_price">
+                <span class="price">$24.99</span>
+              </div>
+            </div>
+            <div class="badge_group">
+              <span class="badge">NEW</span>
+              <span class="badge badge_sale">-50%</span>
+            </div>
+            <button class="btn_like" type="button" aria-label="Like">
+              <span class="icon icon_like"></span>
+            </button>
+            <button class="btn_card">Add to cart</button>
+          </div>
+          <div class="swiper-slide">
+            <a class="product_link" href="#none">
+              <img class="swiper_img" src="/src/img/product3.png" alt="Beige Table Lamp">
+            </a>
+            <div class="rating">
+              <span class="star" style="width: 50%;"></span>
+            </div>
+            <div class="product_title">
+              <a class="product_name" href="#none">Beige Table Lamp</a>
+              <div class="product_price">
+                <span class="price">$24.99</span>
+              </div>
+            </div>
+            <div class="badge_group">
+              <span class="badge">NEW</span>
+              <span class="badge badge_sale">-50%</span>
+            </div>
+            <button class="btn_like" type="button" aria-label="Like">
+              <span class="icon icon_like"></span>
+            </button>
+            <button class="btn_card">Add to cart</button>
+          </div>
+          <div class="swiper-slide">
+            <a class="product_link" href="#none">
+              <img class="swiper_img" src="/src/img/product4.png" alt="Bamboo basket">
+            </a>
+            <div class="rating">
+              <span class="star" style="width: 67%;"></span>
+            </div>
+            <div class="product_title">
+              <a class="product_name" href="#none">Bamboo basket</a>
+              <div class="product_price">
+                <span class="price">$24.99</span>
+              </div>
+            </div>
+            <div class="badge_group">
+              <span class="badge">NEW</span>
+              <span class="badge badge_sale">-50%</span>
+            </div>
+            <button class="btn_like" type="button" aria-label="Like">
+              <span class="icon icon_like"></span>
+            </button>
+            <button class="btn_card">Add to cart</button>
+          </div>
+          <div class="swiper-slide">
+            <a class="product_link" href="#none">
+              <img class="swiper_img" src="/src/img/product5.png" alt="Toasted">
+            </a>
+            <div class="rating">
+              <span class="star" style="width: 100%;"></span>
+            </div>
+            <div class="product_title">
+              <a class="product_name" href="#none">Toasted</a>
+              <div class="product_price">
+                <span class="price">$224.99</span>
+              </div>
+            </div>
+            <div class="badge_group">
+              <span class="badge">NEW</span>
+              <span class="badge badge_sale">-50%</span>
+            </div>
+            <button class="btn_like" type="button" aria-label="Like">
+              <span class="icon icon_like"></span>
+            </button>
+            <button class="btn_card">Add to cart</button>
+          </div>
+        </div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+    <!-- // Product detail -->
+  </div>
+</section>
+  <section class="benefit">
+  <div class="inner">
+    <div class="benefit_detail">
+      <div class="benefit_box">
+        <span class="icon icon_shipping"></span>
+        <div class="benefit_title">
+          <h3 class="benefit_heading">Free Shipping</h3>
+          <p class="benefit_desc">Order<br class="br_class"> above $200</p>
+        </div>
+      </div>
+      <div class="benefit_box">
+        <span class="icon icon_money"></span>
+        <div class="benefit_title">
+          <h3 class="benefit_heading">Money-back</h3>
+          <p class="benefit_desc">30 days guarantee</p>
+        </div>
+      </div>
+      <div class="benefit_box">
+        <span class="icon icon_secure"></span>
+        <div class="benefit_title">
+          <h3 class="benefit_heading">Secure Payments</h3>
+          <p class="benefit_desc">Secured <br class="br_class">by Stripe</p>
+        </div>
+      </div>
+      <div class="benefit_box">
+        <span class="icon icon_support"></span>
+        <div class="benefit_title">
+          <h3 class="benefit_heading">24/7 Support</h3>
+          <p class="benefit_desc">Phone and<br class="br_class"> Email support</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <section class="sale">
+  <div class="inner">
+    <div class="sale_banner">
+      <div class="sale_banner_img">
+        <img class="img_sale" src="/src/img/banner_sale.png" alt="Sale image">
+        <img class="img_sale_mobile" src="/src/img/banner_sale_mobile.png" alt="Sale image mobile">
+      </div>
+      <div class="sale_banner_title">
+          <div class="sale_text">
+            <p class="sale_label">SALE UP TO 35% OFF</p>
+            <h3 class="sale_heading">HUNDREDS of<br> New lower prices!</h3>
+            <p class="sale_desc">It’s more affordable than ever to give every room in your home a stylish makeover</p>
+            <a class="banner_link" href="#none" aria-label="Link banner">Shop Now</a>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <section class="blog_section">
+  <div class="inner">
+    <!-- Section header-->
+    <div class="section_header">
+      <h2 class="section_heading">Articles</h2>
+      <a class="more_link" href="#none">
+        More Articles
+      </a>
+    </div>
+    <!-- // Section header -->
+    <!-- Blog-->
+    <div class="blog">
+      <ul class="blog_list">
+        <li class="blog_item">
+          <a class="blog_card" href="#none">
+            <div class="blog_card_image">
+              <img class="blog_img" src="/src/img/blog_1.jpg" alt="Home">
+            </div>
+            <div class="blog_card_content">
+              <h3 class="blog_title">7 ways to decor your home</h3>
+            </div>
+            <div class="more_link">Read More</div>
+          </a>
+        </li>
+        <li class="blog_item">
+          <a class="blog_card" href="#none">
+            <div class="blog_card_image">
+              <img class="blog_img" src="/src/img/blog_2.jpg" alt="Kitchen">
+            </div>
+            <div class="blog_card_content">
+              <h3 class="blog_title">Kitchen organization</h3>
+            </div>
+            <div class="more_link">Read More</div>
+          </a>
+        </li>
+        <li class="blog_item">
+          <a class="blog_card" href="#none">
+            <div class="blog_card_image">
+              <img class="blog_img" src="/src/img/blog_3.jpg" alt="Bedroom">
+            </div>
+            <div class="blog_card_content">
+              <h3 class="blog_title">Decor your bedroom</h3>
+            </div>
+            <div class="more_link">Read More</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- // Blog -->
+  </div>
+</section>
+  <section class="newsletter">
+  <div class="inner">
+    <div class="newsletter_content">
+      <form class="newsletter_form">
+        <h2 class="form_title">Join Our Newsletter</h2>
+        <p class="form_text">Sign up for deals, new products and promotions</p>
+        <div class="form_input">
+          <span class="icon icon_email"></span>
+          <input class="newsletter_input" type="email" placeholder="Email address">
+          <button class="newsletter_button" type="submit">Signup</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+  <footer class="footer">
+  <div class="inner">
+    <!-- Footer top -->
+    <div class="footer_top">
+      <div class="footer_top_logo">
+        <a class="logo_link" href="#none">
+          <img class="img_logo" src="/src/img/3legant.png" alt="Logo">
+        </a>
+        <span class="footer_divider"></span>
+        <a class="slogan_link" href="#none">Gift & Decoration Store</a>
+      </div>
+      <ul class="footer_list">
+        <li class="footer_item"><a class="footer_item_link" href="#none">Home</a></li>
+        <li class="footer_item"><a class="footer_item_link" href="#none">Shop</a></li>
+        <li class="footer_item"><a class="footer_item_link" href="#none">Product</a></li>
+        <li class="footer_item"><a class="footer_item_link" href="#none">Blog</a></li>
+        <li class="footer_item"><a class="footer_item_link" href="#none">Contact Us</a></li>
+      </ul>
+    </div>
+    <!-- // Footer top -->
+    <!-- Footer bottom -->
+    <div class="footer_bottom">
+      <div class="footer_bottom_title">
+        <p class="copyright">Copyright © 2023 3legant. All rights reserved</p>
+        <div class="footer_bottom_terms">
+          <a class="footer_bottom_link" href="#none">Privacy Policy</a>
+          <a class="footer_bottom_link" href="#none">Terms of Use</a>
+        </div>
+      </div>
+      <ul class="footer_list_icon">
+        <li class="footer_icon_item">
+          <a class="icon_link" href="#none">
+            <span class="icon icon_instagram"></span>
+          </a>
+        </li>
+        <li class="footer_icon_item">
+          <a class="icon_link" href="#none">
+            <span class="icon icon_facebook"></span>
+          </a>
+        </li>
+        <li class="footer_icon_item">
+          <a class="icon_link" href="#none">
+            <span class="icon icon_youtube"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- // Footer bottom -->
+  </div>
+</footer>
+  <!-- Dimmed -->
+  <div class="dimmed"></div>
+  <!-- // Dimmed -->
+  <script src="/src/js/swiper-bundle.min.js"></script>
+  <script src="/src/js/jquery-3.7.1.min.js"></script>
+  <script src="/src/js/script.js"></script>
+</body>
+</html>

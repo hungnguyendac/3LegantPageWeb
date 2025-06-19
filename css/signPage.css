@@ -1,0 +1,744 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, ul, li, button {
+  margin: 0;
+  padding: 0;
+}
+
+body, input, select, textarea, button {
+  font-family: "Inter";
+}
+
+ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button, input {
+  border: 0;
+  line-height: 0;
+  background: transparent;
+}
+
+.blind {
+  overflow: hidden;
+  position: absolute;
+  padding: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  line-height: 1px !important;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/src/fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/src/fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/src/fonts/Inter-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/src/fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/src/fonts/SpaceGrotesk-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/src/fonts/SpaceGrotesk-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/src/fonts/SpaceGrotesk-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/src/fonts/Poppins-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/src/fonts/Poppins-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/src/fonts/Poppins-SemiBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+.inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0px 32px;
+}
+
+span {
+  display: inline-block;
+}
+
+.icon,
+.more_link::before,
+.button_icon {
+  display: inline-block;
+  overflow: hidden;
+  width: 24px;
+  height: 24px;
+  background-image: url(/src/img/sprite_img_icon.png);
+  background-repeat: no-repeat;
+  background-size: 350px 60px;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+.icon_bars {
+  background-position: -78px 1px;
+}
+
+.icon_search {
+  background-position: -2px -1px;
+}
+
+.header_icon .icon_user {
+  background-position: -27px -1px;
+}
+
+.header_icon .icon_bag {
+  background-position: -52px -1px;
+}
+
+.icon_close {
+  background-position: -101px -2px;
+}
+
+.icon_bag {
+  background-position: -52px -1px;
+}
+
+.icon_heart {
+  background-position: -127px -2px;
+}
+
+.icon_instagram {
+  background-position: -152px -1px;
+}
+
+.icon_facebook {
+  background-position: -177px -1px;
+}
+
+.icon_youtube {
+  background-position: -202px -1px;
+}
+
+.icon_sale {
+  background-position: -253px -1px;
+}
+
+.icon_email {
+  background-position: -326px -26px;
+}
+
+.dimmed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5019607843);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Badge */
+.badge_group .badge {
+  display: inline-block;
+  align-self: flex-start;
+  min-width: 67px;
+  padding: 4px;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 16px;
+  box-sizing: border-box;
+}
+.badge_group .badge_sale {
+  min-width: 71px;
+  background-color: #38CB89;
+  color: #FEFEFE;
+}
+
+/* // Badge */
+/* Section header */
+.section_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section_header .section_heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 44px;
+  color: #000;
+  letter-spacing: -0.4px;
+}
+
+.more_link {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  position: relative;
+  height: 28px;
+  font-weight: 500;
+  line-height: 28px;
+  color: #141718;
+  letter-spacing: -0.4px;
+  box-sizing: border-box;
+}
+
+.more_link::after,
+.more_link::before {
+  display: inline-block;
+  content: "";
+}
+
+.more_link::after {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 1px;
+  background-color: #141718;
+}
+
+.more_link::before {
+  background-position: -100px -26px;
+}
+
+/* // Section header */
+/* Banner link */
+.banner_link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 12px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.4px;
+  color: #141718;
+}
+
+.banner_link::after {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(/src/img/sprite_img_icon.png);
+  background-repeat: no-repeat;
+  background-size: 292px 50px;
+  background-position: -85px -22px;
+  vertical-align: top;
+  cursor: pointer;
+  box-sizing: border-box;
+  content: "";
+}
+
+/* // Banner link */
+/* Rating */
+.rating {
+  display: block;
+  width: 88px;
+  height: 16px;
+  background-image: url(/src/img/img_stars_bg.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.rating .star {
+  display: block;
+  width: 0;
+  height: 100%;
+  background-image: url(/src/img/img_stars.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* // Rating */
+/* Cart popup */
+.cart_popup .icon_control {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(/src/img/Card_and_product.png);
+  background-repeat: no-repeat;
+  background-size: 167px 167px;
+  vertical-align: top;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.icon_decrease {
+  background-position: -17px 0px;
+}
+
+.icon_increase {
+  background-position: -101px -1px;
+}
+
+/* // Cart popup */
+/* Product Page */
+.product_page .icon {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url(/src/img/Card_and_product.png);
+  background-repeat: no-repeat;
+  background-size: 125px 125px;
+  vertical-align: top;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.product_page .icon_right {
+  background-position: -87px -1px;
+}
+.product_page .button_icon_left {
+  background-position: -327px -1px;
+}
+.product_page .button_icon_right {
+  background-position: -327px -1px;
+  transform: rotate(180deg);
+}
+.product_page .product_button .icon {
+  width: 20px;
+  height: 20px;
+  background-size: 208.333px 208.333px;
+}
+.product_page .product_button .icon_minus {
+  background-position: -21px -1px;
+}
+.product_page .product_button .icon_add {
+  background-position: -1px -1px;
+}
+.product_page .product_button .icon_heart {
+  display: inline-block;
+  overflow: hidden;
+  width: 24px;
+  height: 24px;
+  background-image: url(/src/img/sprite_img_icon.png);
+  background-repeat: no-repeat;
+  background-size: 350px 60px;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+.product_page .reviews_detail .icon,
+.product_page .feedback_form .icon {
+  display: inline-block;
+  overflow: hidden;
+  width: 24px;
+  height: 24px;
+  background-image: url(/src/img/sprite_img_icon.png);
+  background-repeat: no-repeat;
+  background-size: 350px 60px;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+.product_page .reviews_detail .icon_down,
+.product_page .feedback_form .icon_down {
+  background-position: -227px -1px;
+}
+.product_page .reviews_detail .icon_btn,
+.product_page .feedback_form .icon_btn {
+  background-position: -177px -26px;
+}
+.product_page .tab_button .icon {
+  display: inline-block;
+  overflow: hidden;
+  width: 24px;
+  height: 24px;
+  background-image: url(/src/img/Card_and_product.png);
+  background-repeat: no-repeat;
+  background-size: 250px 250px;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+.product_page .tab_button .icon_down {
+  background-position: -201px -1px;
+}
+
+.select_list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.select_list .select_item {
+  padding: 8px 0;
+}
+
+.select_list .is_active {
+  border-bottom: 1px solid #141718;
+}
+
+.select_list .is_active .select_link {
+  color: #141718;
+  font-weight: bold;
+}
+
+.select_item .select_link {
+  display: block;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #6C7275;
+}
+
+.select {
+  position: relative;
+}
+
+.select .btn_option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 256px;
+  height: 48px;
+  padding: 8px 11px 8px 13px;
+  border: 2px solid #E8ECEF;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  cursor: pointer;
+}
+
+.select .btn_option::after {
+  display: inline-block;
+  overflow: hidden;
+  width: 24px;
+  height: 24px;
+  background-image: url(/src/img/sprite_img_icon.png);
+  background-repeat: no-repeat;
+  background-size: 350px 60px;
+  background-position: -226px -1px;
+  vertical-align: top;
+  transition: rotate 0.25s ease;
+  box-sizing: border-box;
+  content: "";
+}
+
+.select .btn_option.is_active::after {
+  rotate: 180deg;
+}
+
+.select .select_option {
+  overflow: hidden;
+  position: absolute;
+  top: 55px;
+  width: 100%;
+  max-height: 0;
+  padding: 0 8px;
+  border: 2px solid #f3f5f7;
+  border-radius: 12px;
+  background-color: #fff;
+  opacity: 0;
+  pointer-events: none;
+  transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+  box-sizing: border-box;
+  z-index: 99;
+}
+
+.select_option.is_show {
+  max-height: 290px;
+  padding: 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.select_list .select_item:hover {
+  border-radius: 8px;
+  background-color: #F3F5F7;
+  border-bottom: none;
+}
+
+.select_link {
+  padding-left: 8px;
+}
+
+.select_list .is_active {
+  border-bottom: none;
+}
+
+.select_list .select_item:hover .select_link {
+  color: #141718;
+  font-weight: bold;
+}
+
+/* // Product Page */
+.sign {
+  height: 100vh;
+  overflow: hidden;
+}
+.sign .inner {
+  display: flex;
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.sign_images {
+  flex: 0 0 51.1111%;
+  position: relative;
+  max-height: 100vh;
+}
+.sign_images .img_logo {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.sign_images .img_place {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.form_wrapper {
+  flex-grow: 1;
+  max-width: 456px;
+  margin-top: 180px;
+  padding: 40px 87px;
+}
+.form_wrapper .form_title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+.form_wrapper .form_text {
+  margin-top: 24px;
+  margin-top: 24px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0px;
+  color: #6C7275;
+}
+.form_wrapper .sign_link {
+  font-weight: 600;
+  color: #38CB89;
+}
+
+.from_input {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 32px;
+}
+.from_input .input {
+  width: 100%;
+  height: 40px;
+  padding: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #E8ECEF;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+.from_input .input:focus {
+  outline: none;
+}
+.from_input .input::placeholder {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -0.1px;
+  color: #6C7275;
+}
+.from_input .password {
+  position: relative;
+}
+.from_input .password .toggle_password {
+  display: inline-block;
+  position: absolute;
+  top: 4px;
+  right: -1px;
+  width: 24px;
+  height: 24px;
+  background-image: url(/src/img/sprite_img_icon.png);
+  background-size: 400px 60px;
+  background-position: -261px -26px;
+  cursor: pointer;
+}
+.from_input .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.from_input .btn_sign {
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #000;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: -0.4px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.checkbox .input {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  border: 1.5px solid #6C7275;
+  border-radius: 4px;
+  accent-color: #121212;
+}
+.checkbox .label {
+  flex: 1;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0px;
+  color: #605F5F;
+}
+.checkbox .label_link {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0px;
+  color: #605F5F;
+  font-weight: 600;
+  letter-spacing: -0.1px;
+  color: #141718;
+}
+
+.form_sign_in .checkbox .label {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1200px) {
+  .sign {
+    overflow: auto;
+  }
+  .sign .inner {
+    gap: 30px;
+  }
+  .sign_images {
+    width: 100%;
+    max-width: 600px;
+    height: 100vh;
+  }
+  .form_wrapper {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sign .inner {
+    flex-direction: column;
+    gap: 0;
+  }
+  .sign_images {
+    max-width: 100%;
+    max-height: 430px;
+  }
+  .sign_images .img_place {
+    max-height: 430px;
+  }
+  .form_wrapper {
+    max-width: 100%;
+    margin: 0;
+    padding: 40px 32px;
+  }
+  .form_wrapper .form_title {
+    letter-spacing: -0.7px;
+  }
+  .form_wrapper .form_text {
+    margin-top: 25px;
+  }
+  .from_input {
+    margin-top: 31px;
+  }
+  .from_input .toggle_password {
+    top: 1px;
+  }
+  .from_input .password::before {
+    top: 1px;
+  }
+  .from_input .input {
+    padding-bottom: 13px;
+  }
+  .from_input .input::placeholder {
+    letter-spacing: 0px;
+  }
+  .from_input .btn_sign {
+    max-width: 311px;
+  }
+  .checkbox .label {
+    margin-top: 2px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .checkbox .label_link {
+    margin-top: 2px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .form_sign_in .checkbox {
+    height: 25px;
+    align-items: center;
+  }
+  .form_sign_in .checkbox .label {
+    font-size: 16px;
+  }
+}

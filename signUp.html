@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Page</title>
+  <link rel="stylesheet" href="/dist/css/signPage.css">
+</head>
+
+<body>
+  <section class="sign">
+    <div class="inner">
+      <!-- Sign images -->
+      <div class="sign_images">
+        <a href="/dist/" aria-label="Logo link">
+          <img class="img_logo" src="/src/img/img_logo.svg" alt="Logo">
+        </a>
+        <img class="img_place" src="/src/img/img_sign.png" alt="Image Sign">
+      </div>
+      <!-- // Sign images -->
+      <!-- Form Sign up-->
+      <div class="form_wrapper">
+        <div class="form_sign_up">
+          <h3 class="form_title">Sign up</h3>
+          <p class="form_text">Already have an account? <a class="sign_link" href="/src/views/signIn.html" data-target="sign_in">Sign
+              in</a></p>
+          <form class="from_input">
+            <input class="input" type="text" placeholder="Your name">
+            <input class="input" type="text" placeholder="Username">
+            <input class="input" type="email" placeholder="Email address">
+            <div class="password">
+              <input class="input password_input" type="password" placeholder="Password">
+              <div class="toggle_password"></div>
+            </div>
+            <div class="checkbox">
+              <input class="input" type="checkbox" id="checkbox1" name="checkbox1" value="Yes">
+              <label class="label" for="checkbox1">
+                I agree with 
+                <a class="label_link" href="#none">Privacy Policy</a> and 
+                <a class="label_link" href="#none">Terms of Use</a>
+              </label>
+            </div>
+            <button class="btn_sign" type="button">Sign Up</button>
+          </form>
+        </div>
+      </div>
+      <!-- // Form Sign up-->
+    </div>
+  </section>
+</body>
+<script src="/src/js/jquery-3.7.1.min.js"></script>
+<script src="/src/js/sign.js"></script>
+<script src="/src/js/script.js"></script>
+</html>

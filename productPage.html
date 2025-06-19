@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <link rel="stylesheet" href="/src/css/lib/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/dist/css/productPage.css">
+</head>
+
+<body>
+  <div class="top_bar">
+  <div class="inner">
+    <div class="top_bar_title">
+      <span class="icon icon_sale"></span>
+      <p class="sale_text">30% off storewide — Limited time!</p>
+      <a class="sale_link" href="#none">
+        Shop Now
+        <span class="icon icon_arrow_blue"></span>
+      </a>
+    </div>
+    <button class="btn_close">
+      <span class="icon icon_close"></span>
+    </button>
+  </div>
+</div>
+  <header class="header">
+  <div class="inner">
+    <!-- Header box -->
+    <div class="header_box">
+      <!-- Header logo -->
+      <div class="header_logo">
+        <button class="menu_button is_active" type="button" aria-label="Open popup">
+          <span class="icon icon_bars"></span>
+        </button>
+        <h1 class="logo">
+          <a class="logo_link" href="/dist/" aria-label="Logo">
+            <img class="logo_img" src="../src/img/img_logo.svg" alt="Logo">
+          </a>
+        </h1>
+      </div>
+      <!-- // Header logo -->
+      <!-- Header menu -->
+      <nav class="header_menu">
+        <ul class="header_list">
+          <li class="header_item">
+            <a class="header_item_link" href="#none" aria-label="Home">
+              Home
+            </a>
+          </li>
+          <li class="header_item">
+            <a class="header_item_link" href="#none" aria-label="Shop">
+              Shop
+            </a>
+          </li>
+          <li class="header_item">
+            <a class="header_item_link" href="/dist/productPage.html" aria-label="Product">
+              Product
+            </a>
+          </li>
+          <li class="header_item">
+            <a class="header_item_link" href="#none" aria-label="Contact">
+              Contact Us
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- // Header menu -->
+      <!-- Header icon -->
+      <div class="header_icon">
+        <button class="search_button" type="button" aria-label="Search">
+          <span class="icon icon_search"></span>
+        </button>
+        <a class="user_link" href="/src/views/signUp.html" aria-label="User">
+          <span class="icon icon_user"></span>
+        </a>
+        <button class="bag_button" aria-label="Shopping">
+          <span class="icon icon_bag"></span>
+          <span class="icon_number">2</span>
+        </button>
+      </div>
+      <!-- // Header icon -->
+    </div>
+    <!-- // Header box -->
+    <!-- // Popup mobile -->
+    <div class="popup">
+      <!-- popup header -->
+      <div class="popup_header">
+        <div class="popup_logo">
+          <a class="logo_link" href="/dist/" aria-label="Logo">
+            <h2 class="logo_text">3legant<span class="dot">.</span></h2>
+          </a>
+          <button class="button_close" type="button" aria-label="Close">
+            <span class="icon icon_close"></span>
+          </button>
+        </div>
+        <div class="popup_input">
+          <button class="search_button" type="button" aria-label="Search">
+            <span class="icon icon_search"></span>
+          </button>
+          <input class="input_search" type="text" placeholder="Search">
+        </div>
+        <nav class="popup_menu"></nav>
+      </div>
+      <!-- // Popup header -->
+      <!-- Popup footer -->
+      <div class="popup_footer">
+        <div class="title">
+          <p class="title_text">Cart</p>
+          <div class="title_icon">
+            <a class="bag_link" href="#none" aria-label="Shopping">
+              <span class="icon icon_bag"></span>
+            </a>
+            <span class="icon_number">2</span>
+          </div>
+        </div>
+        <div class="title">
+          <p class="title_text">Wishlist</p>
+          <div class="title_icon">
+            <a class="love_link" href="#none" aria-label="Favorite Products">
+              <span class="icon icon_heart"></span>
+            </a>
+            <span class="icon_number">2</span>
+          </div>
+        </div>
+        <div class="popup_button">
+          <button class="popup_button_sign">Sign In</button>
+        </div>
+        <div class="popup_footer_icon">
+          <a class="instagram_link" href="#none" aria-label="Instagram">
+            <span class="icon icon_instagram"></span>
+          </a>
+          <a class="fb_link" href="#none" aria-label="Facebook">
+            <span class="icon icon_facebook"></span>
+          </a>
+          <a class="ytb_link" href="#none" aria-label="Youtube">
+            <span class="icon icon_youtube"></span>
+          </a>
+        </div>
+      </div>
+      <!-- // Popup footer -->
+    </div>
+    <!-- Popup mobile -->
+    <!-- Cart popup -->
+    <div class="cart_popup">
+      <div class="cart_popup_header">
+        <h3 class="cart_popup_title">Cart</h3>
+        <button class="button" type="button">
+          <span class="icon icon_close"></span>
+        </button>
+      </div>
+      <ul class="cart_list">
+        <li class="cart_item">
+          <img class="cart_item_img" src="/src/img/cart_popup/product_1.png" alt="Product image">
+          <div class="cart_item_info">
+            <div class="product_info">
+              <div class="product_info_title">
+                <p class="product_name">Tray Table</p>
+                <p class="product_color">Color: Black</p>
+                <div class="quantity_selector">
+                  <button class="button_decrease" type="button">
+                    <span class="icon_control icon_decrease"></span>
+                  </button>
+                  <input class="quantity_input" type="number" min="1" max="99" value="2" />
+                  <button class="button_increase" type="button">
+                    <span class="icon_control icon_increase"></span>
+                  </button>
+                </div>
+              </div>
+              <div class="product_price_remove">
+                <p class="product_price">$19.19</p>
+                <button class="remove_item_btn">
+                  <span class="icon icon_close"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="cart_item">
+          <img class="cart_item_img" src="/src/img/cart_popup/product_2.png" alt="Product image">
+          <div class="cart_item_info">
+            <div class="product_info">
+              <div class="product_info_title">
+                <p class="product_name">Tray Table</p>
+                <p class="product_color">Color: Red</p>
+                <div class="quantity_selector">
+                  <button class="button_decrease" type="button">
+                    <span class="icon_control icon_decrease"></span>
+                  </button>
+                  <input class="quantity_input" type="number" min="1" max="99" value="2" />
+                  <button class="button_increase" type="button">
+                    <span class="icon_control icon_increase"></span>
+                  </button>
+                </div>
+              </div>
+              <div class="product_price_remove">
+                <p class="product_price">$19.19</p>
+                <button class="remove_item_btn">
+                  <span class="icon icon_close"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="cart_item">
+          <img class="cart_item_img" src="/src/img/cart_popup/product_3.png" alt="Product image">
+          <div class="cart_item_info">
+            <div class="product_info">
+              <div class="product_info_title">
+                <p class="product_name">Table lamp</p>
+                <p class="product_color">Color: Gold</p>
+                <div class="quantity_selector">
+                  <button class="button_decrease" type="button">
+                    <span class="icon_control icon_decrease"></span>
+                  </button>
+                  <input class="quantity_input" type="number" min="1" max="99" value="2" />
+                  <button class="button_increase" type="button">
+                    <span class="icon_control icon_increase"></span>
+                  </button>
+                </div>
+              </div>
+              <div class="product_price_remove">
+                <p class="product_price">$39.00</p>
+                <button class="remove_item_btn">
+                  <span class="icon icon_close"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="cart_popup_payment">
+        <div class="total_amount">
+          <div class="subtotal">
+            <p class="subtotal_text">Subtotal</p>
+            <p class="subtotal_price">$99.00</p>
+          </div>
+          <div class="total">
+            <p class="total_text">Total</p>
+            <p class="total_price">$234.00</p>
+          </div>
+        </div>
+        <button class="btn_checkout" type="button">Checkout</button>
+        <a class="cart_link" href="#none">View Cart</a>
+      </div>
+    </div>
+    <!-- // Cart popup -->
+  </div>
+</header>
+  <section class="product_page">
+    <div class="inner">
+      <ul class="list_link">
+        <li class="list_link_item">
+          <a class="item_link" href="/dist/">
+            Home
+            <span class="icon icon_right"></span>
+          </a>
+        </li>
+        <li class="list_link_item">
+          <a class="item_link" href="#none">
+            Shop
+            <span class="icon icon_right"></span>
+          </a>
+        </li>
+        <li class="list_link_item">
+          <a class="item_link" href="#none">
+            Living Room
+            <span class="icon icon_right"></span>
+          </a>
+        </li>
+        <li class="list_link_item">
+          <a class="item_link" href="#none">
+            Product
+          </a>
+        </li>
+      </ul>
+      <div class="product_loop">
+        <div class="product_slider">
+          <div class="swiper productPage">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="swiper_img" src="/src/img/product_page/product_slide/table_img_slide.png" alt="slide1" />
+              </div>
+              <div class="swiper-slide">
+                <img class="swiper_img" src="/src/img/product_page/product_slide/product_slideA.png" alt="slide5" />
+              </div>
+              <div class="swiper-slide">
+                <img class="swiper_img" src="/src/img/product_page/product_slide/product_slideB.png" alt="slide6" />
+              </div>
+              <div class="swiper-slide">
+                <img class="swiper_img" src="/src/img/product_page/product_slide/product_slideC.png" alt="slide7" />
+              </div>
+              <div class="swiper-slide">
+                <img class="swiper_img" src="/src/img/product_page/product_slide/table_img_slide_1.png" alt="slide2" />
+              </div>
+              <div class="swiper-slide">
+                <img class="swiper_img" src="/src/img/product_page/product_slide/table_img_slide_2.png" alt="slide3" />
+              </div>
+              <div class="swiper-slide">
+                <img class="swiper_img" src="/src/img/product_page/product_slide/table_img_slide_3.png" alt="slide4" />
+              </div>
+            </div>
+            <div class="badge_group">
+              <span class="badge">NEW</span>
+              <span class="badge badge_sale">-50%</span>
+            </div>
+            <!-- Navigation -->
+            <button class="swiper-button-prev"></button>
+            <button class="swiper-button-next"></button>
+          </div>
+          <div class="img_area">
+            <img class="img_table" src="/src/img/product_page/table_img_1.png" alt="Product Image">
+            <img class="img_table" src="/src/img/product_page/table_img_2.png" alt="Product Image">
+            <img class="img_table" src="/src/img/product_page/table_img_3.png" alt="Product Image">
+          </div>
+        </div>
+        <div class="product_loop_detail">
+          <div class="product_info">
+            <div class="product_reviews">
+              <img class="rating_review" src="/src/img/product_page/rating_product.png" alt="Rating image">
+              <p class="text_review">11 Reviews</p>
+            </div>
+            <h3 class="product_name">Tray Table</h3>
+            <p class="product_describe">Buy one or buy a few and make every space where you sit more convenient. Light
+              and easy to move around with removable
+              tray top, handy for serving snacks.</p>
+            <p class="product_price">
+              $199.00
+              <span class="price_original">$400.00</span>
+            </p>
+          </div>
+          <div class="offer_time">
+            <p class="time_text">Offer expires in:</p>
+            <ul class="time_box">
+              <li class="time_box_item">
+                <h3 class="time_box_number" id="days">02</h3>
+                <p class="time_box_label">Days</p>
+              </li>
+              <li class="time_box_item">
+                <h3 class="time_box_number" id="hours">12</h3>
+                <p class="time_box_label">Hours</p>
+              </li>
+              <li class="time_box_item">
+                <h3 class="time_box_number" id="minutes">45</h3>
+                <p class="time_box_label">Minutes</p>
+              </li>
+              <li class="time_box_item">
+                <h3 class="time_box_number" id="seconds">05</h3>
+                <p class="time_box_label">Seconds</p>
+              </li>
+            </ul>
+          </div>
+          <div class="product_attributes">
+            <div class="attribute measurements">
+              <p class="attribute_title">Measurements</p>
+              <p class="attribute_detail">17 1/2x20 5/8 "</p>
+            </div>
+            <div class="attribute colors">
+              <div class="choose_color">
+                <p class="attribute_title">Choose Color</p>
+                <span class="icon icon_right"></span>
+              </div>
+              <p class="attribute_detail">Black</p>
+            </div>
+            <ul class="product_list_img">
+              <li class="item_img">
+                <img class="img_st" src="/src/img/product_page/product_st1.png" alt="Product Image">
+              </li>
+              <li class="item_img">
+                <img class="img_st" src="/src/img/product_page/product_st2.png" alt="Product Image">
+              </li>
+              <li class="item_img">
+                <img class="img_st" src="/src/img/product_page/product_st3.png" alt="Product Image">
+              </li>
+              <li class="item_img">
+                <img class="img_st" src="/src/img/product_page/product_st4.png" alt="Product Image">
+              </li>
+            </ul>
+          </div>
+          <div class="product_button">
+            <div class="product_actions">
+              <div class="quantity_actions">
+                <button class="quantity_button button_decrease">
+                  <span class="icon icon_minus"></span>
+                </button>
+                <input class="quantity_input" type="number" min="1" max="99" value="1" />
+                <button class="quantity_button button_increase">
+                  <span class="icon icon_add"></span>
+                </button>
+              </div>
+              <button class="wishlist" type="button">
+                <span class="wishlist_heart"></span>
+                Wishlist
+              </button>
+            </div>
+            <button class="btn_addToCart" type="button">Add to Cart</button>
+          </div>
+          <div class="product_type">
+            <p class="type_info">
+              SKU
+              <span class="label">1117</span>
+            </p>
+            <p class="type_info">
+              CATEGORY
+              <span class="label">Living Room, Bedroom</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="product_tabs">
+        <div class="tab_heading">
+          <button class="tab_button" data-tab="info">
+            Additional Info
+            <span class="icon icon_down"></span>
+          </button>
+          <div class="tab_content_mobile">
+            <div class="additional_info">
+              <div class="info_pc">
+                <div class="info_content">
+                  <h3 class="info_content_heading">Details</h3>
+                  <p class="info_content_text">You can use the removable tray for serving. The design makes it easy to
+                    put the tray back after use since you place it
+                    directly on the table frame without having to fit it into any holes.</p>
+                </div>
+                <div class="info_content">
+                  <h3 class="info_content_heading">Packaging</h3>
+                  <p class="info_content_text">
+                    Width: 20 " Height: 1 ½ " Length: 21 ½ " <br>
+                    Weight: 7 lb 8 oz <br>
+                    Package(s): 1
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="tab_button" data-tab="question">
+            Questions
+            <span class="icon icon_down"></span>
+          </button>
+          <div class="tab_content_mobile">
+            <p>The question section is developing.</p>
+          </div>
+          <button class="tab_button active" data-tab="review">
+            Reviews
+            <span class="reviews_number">(11)</span>
+            <span class="icon icon_down"></span>
+          </button>
+        </div>
+        <div class="tab_contents">
+          <div class="tab_content" data-tab="info">
+            <div class="additional_info">
+              <div class="info_pc">
+                <div class="info_content">
+                  <h3 class="info_content_heading">Details</h3>
+                  <p class="info_content_text">You can use the removable tray for serving. The design makes it easy to
+                    put the tray back after use since you place it
+                    directly on the table frame without having to fit it into any holes.</p>
+                </div>
+                <div class="info_content">
+                  <h3 class="info_content_heading">Packaging</h3>
+                  <p class="info_content_text">
+                    Width: 20 " Height: 1 ½ " Length: 21 ½ " <br>
+                    Weight: 7 lb 8 oz <br>
+                    Package(s): 1
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab_content" data-tab="question">
+            <p>The question section is developing.</p>
+          </div>
+          <div class="tab_content active" data-tab="review">
+            <div class="customer_reviews">
+              <h3 class="review_title">Customer Reviews</h3>
+              <div class="product_reviews">
+                <img class="rating_review" src="/src/img/product_page/rating_productPage.png" alt="Rating image">
+                <p class="text_review">11 Reviews</p>
+              </div>
+              <p class="firt_review">Be the first to review <span class="name_review">Tray Table</span></p>
+              <div class="feedback_form">
+                <textarea class="feedback_input" placeholder="Share your thoughts"></textarea>
+                <button class="feedback_btn" type="button">Write Review</button>
+                <button class="feedback_btn_icon">
+                  <span class="icon icon_btn"></span>
+                </button>
+              </div>
+            </div>
+            <div class="reviews_detail">
+              <div class="reviews_heading">
+                <h3 class="reviews_heading_title">11 Reviews</h3>
+                <div class="select">
+                  <button class="btn_option" type="button" aria-label="Select">
+                    Newest
+                  </button>
+                  <div class="select_option">
+                    <ul class="select_list">
+                      <li class="select_item is_active">
+                        <a class="select_link" href="#none">Newest 1</a>
+                      </li>
+                      <li class="select_item">
+                        <a class="select_link" href="#none">Newest 2</a>
+                      </li>
+                      <li class="select_item">
+                        <a class="select_link" href="#none">Newest 3</a>
+                      </li>
+                      <li class="select_item">
+                        <a class="select_link" href="#none">Newest 4</a>
+                      </li>
+                      <li class="select_item">
+                        <a class="select_link" href="#none">Newest 5</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <ul class="reviews_list" id="reviewList"></ul>
+              <button class="btn_load_more" type="button">Load more</button>
+            </div>
+            <div class="reaction_wrapper" id="reactionBox">
+              <div class="reaction_box">
+                <img class="reaction_img" src="/src/img/emoticons/favourite.png" alt="Favorite">
+                <img class="reaction_img" src="/src/img/emoticons/approved.png" alt="Approved">
+                <img class="reaction_img" src="/src/img/emoticons/like.png" alt="Like">
+                <img class="reaction_img" src="/src/img/emoticons/smile.png" alt="Smile">
+                <img class="reaction_img" src="/src/img/emoticons/hahaha.png" alt="Hahaha">
+                <img class="reaction_img" src="/src/img/emoticons/angry.png" alt="Angry">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="newsletter">
+  <div class="inner">
+    <div class="newsletter_content">
+      <form class="newsletter_form">
+        <h2 class="form_title">Join Our Newsletter</h2>
+        <p class="form_text">Sign up for deals, new products and promotions</p>
+        <div class="form_input">
+          <span class="icon icon_email"></span>
+          <input class="newsletter_input" type="email" placeholder="Email address">
+          <button class="newsletter_button" type="submit">Signup</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+  <footer class="footer">
+  <div class="inner">
+    <!-- Footer top -->
+    <div class="footer_top">
+      <div class="footer_top_logo">
+        <a class="logo_link" href="#none">
+          <img class="img_logo" src="/src/img/3legant.png" alt="Logo">
+        </a>
+        <span class="footer_divider"></span>
+        <a class="slogan_link" href="#none">Gift & Decoration Store</a>
+      </div>
+      <ul class="footer_list">
+        <li class="footer_item"><a class="footer_item_link" href="#none">Home</a></li>
+        <li class="footer_item"><a class="footer_item_link" href="#none">Shop</a></li>
+        <li class="footer_item"><a class="footer_item_link" href="#none">Product</a></li>
+        <li class="footer_item"><a class="footer_item_link" href="#none">Blog</a></li>
+        <li class="footer_item"><a class="footer_item_link" href="#none">Contact Us</a></li>
+      </ul>
+    </div>
+    <!-- // Footer top -->
+    <!-- Footer bottom -->
+    <div class="footer_bottom">
+      <div class="footer_bottom_title">
+        <p class="copyright">Copyright © 2023 3legant. All rights reserved</p>
+        <div class="footer_bottom_terms">
+          <a class="footer_bottom_link" href="#none">Privacy Policy</a>
+          <a class="footer_bottom_link" href="#none">Terms of Use</a>
+        </div>
+      </div>
+      <ul class="footer_list_icon">
+        <li class="footer_icon_item">
+          <a class="icon_link" href="#none">
+            <span class="icon icon_instagram"></span>
+          </a>
+        </li>
+        <li class="footer_icon_item">
+          <a class="icon_link" href="#none">
+            <span class="icon icon_facebook"></span>
+          </a>
+        </li>
+        <li class="footer_icon_item">
+          <a class="icon_link" href="#none">
+            <span class="icon icon_youtube"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- // Footer bottom -->
+  </div>
+</footer>
+  <!-- Dimmed -->
+  <div class="dimmed"></div>
+  <!-- // Dimmed -->
+  <script src="/src/js/swiper-bundle.min.js"></script>
+  <script src="/src/js/jquery-3.7.1.min.js"></script>
+  <script src="/src/js/data_reviews_list.js"></script>
+  <script src="/src/js/script.js"></script>
+</body>
+</html>
